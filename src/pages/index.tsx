@@ -65,36 +65,26 @@ export default function Home() {
 			</div>
 		);
 	}
+
 	const DextChartV3 = () => {
 		return (
-		  <div>
-			<h2>V3 Chart</h2>
-			<iframe
-			  id="dextools-widget"
-			  title="DEXTools Trading Chart"
-			  width="500"
-			  height="400"
-			  src="https://www.dextools.io/widget-chart/es/ether/pe-light/0xa84181f223a042949e9040e42b44c50021802db6?theme=light&chartType=2&chartResolution=30&drawingToolbars=false"
-			></iframe>
-		  </div>
-		);
-	  };
-	  
-	  const DextChartV2 = () => {
+			<iframe id="dextools-widget"
+				title="DEXTools Trading Chart"
+				width="500" height="400"
+				src="https://www.dextools.io/widget-chart/es/ether/pe-light/0xa84181f223a042949e9040e42b44c50021802db6?theme=light&chartType=2&chartResolution=30&drawingToolbars=false"></iframe>
+		)
+	}
+
+	const DextChartV2 = () => {
 		return (
-		  <div>
-			<h2>V2 Chart</h2>
-			<iframe
-			  id="dextools-widget"
-			  title="DEXTools Trading Chart"
-			  width="500"
-			  height="400"
-			  src="https://www.dextools.io/widget-chart/es/ether/pe-light/0xaa9b647f42858f2db441f0aa75843a8e7fd5aff2?theme=light&chartType=2&chartResolution=30&drawingToolbars=false"
-			></iframe>
-		  </div>
-		);
-	  };
-	  
+			<iframe id="dextools-widget"
+				title="DEXTools Trading Chart"
+				width="500" height="400"
+				src="https://www.dextools.io/widget-chart/es/ether/pe-light/0xaa9b647f42858f2db441f0aa75843a8e7fd5aff2?theme=light&chartType=2&chartResolution=30&drawingToolbars=false"></iframe>
+		)
+	}
+
+
 
 	
 	const UniSwapper = () => {
