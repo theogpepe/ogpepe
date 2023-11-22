@@ -11,7 +11,7 @@ const Info: NextPage = () => {
             </Head>
             <main>
                 <h1>Information Page</h1>
-                <p>This is the info page for wojak.farm.</p>
+                <p>This is the info page for PEPE</p>
                 <Link href="/">
                     Go back to home
                 </Link>

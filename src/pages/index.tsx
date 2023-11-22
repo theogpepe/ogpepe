@@ -11,12 +11,12 @@ import '@uniswap/widgets/fonts.css'
 
 const MY_TOKEN_LIST = [
     {
-    "name": "Wojak.farm",
-    "address": "0x4fd2EC9bDd398f8e522d76eA3704F8dBdc1f23f4",
-    "symbol": "WOJAK",
+    "name": "Pepe",
+    "address": "0x4dFae3690b93c47470b03036A17B23C1Be05127C",
+    "symbol": "PEPE",
     "decimals": 18,
     "chainId": 1,
-    "logoURI": "https://pbs.twimg.com/profile_images/1312314914392993792/AEEJkpQM_400x400.jpg"
+    "logoURI": "https://ogpepe.io/logo.png"
   },
     {
     "name": "Tether USD",
@@ -46,7 +46,7 @@ export default function Home() {
 
 	function TokenBalanceComponent() {
 		const { data, isError, isLoading } = useContractRead({
-			address: "0x4fd2EC9bDd398f8e522d76eA3704F8dBdc1f23f4", // Your contract's address
+			address: "0x4dFae3690b93c47470b03036A17B23C1Be05127C", // Your contract's address
 			abi: ABIWojak, // Your contract's ABI
 			functionName: 'balanceOf', // Replace with your contract's relevant function
 			args: [address], // Arguments for the function call
@@ -61,23 +61,44 @@ export default function Home() {
 
 		return (
 			<div>
-				Wojak Balance: {parseFloat(formattedBalance).toFixed(3)}
+				PEPE Balance: {parseFloat(formattedBalance).toFixed(3)}
 			</div>
 		);
 	}
-
-	const DextChart = () => {
+	const DextChartV3 = () => {
 		return (
-			<iframe id="dextools-widget"
-				title="DEXTools Trading Chart"
-				width="500" height="400"
-				src="https://www.dextools.io/widget-chart/es/ether/pe-light/0x20267b3c4148446f2647af96d320db88c383537f?theme=light&chartType=2&chartResolution=30&drawingToolbars=false"></iframe>
-		)
-	}
+		  <div>
+			<h2>V3 Chart</h2>
+			<iframe
+			  id="dextools-widget"
+			  title="DEXTools Trading Chart"
+			  width="500"
+			  height="400"
+			  src="https://www.dextools.io/widget-chart/es/ether/pe-light/0xa84181f223a042949e9040e42b44c50021802db6?theme=light&chartType=2&chartResolution=30&drawingToolbars=false"
+			></iframe>
+		  </div>
+		);
+	  };
+	  
+	  const DextChartV2 = () => {
+		return (
+		  <div>
+			<h2>V2 Chart</h2>
+			<iframe
+			  id="dextools-widget"
+			  title="DEXTools Trading Chart"
+			  width="500"
+			  height="400"
+			  src="https://www.dextools.io/widget-chart/es/ether/pe-light/0xaa9b647f42858f2db441f0aa75843a8e7fd5aff2?theme=light&chartType=2&chartResolution=30&drawingToolbars=false"
+			></iframe>
+		  </div>
+		);
+	  };
+	  
 
 	
 	const UniSwapper = () => {
-		const wojak = "0x4fd2EC9bDd398f8e522d76eA3704F8dBdc1f23f4";
+		const pepe = "0x4dFae3690b93c47470b03036A17B23C1Be05127C";
 		
 		// Define your custom token list URI (or use a predefined one)
 		const customTokenListUri = MY_TOKEN_LIST;
@@ -90,7 +111,7 @@ export default function Home() {
 	  
 		return (
 		  <div className="Uniswap">
-			<SwapWidget {...widgetConfig} defaultOutputTokenAddress={wojak} />
+			<SwapWidget {...widgetConfig} defaultOutputTokenAddress={pepe} />
 		  </div>
 		);
 	  }
@@ -102,11 +123,11 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Wojak.farm</title>
+				<title>PEPE</title>
 				<meta
 					name="description"
-					content="The home of the wojak.farm community, the first Wojak token on Ethereum"
-				/>
+					content= "The home of the Original PEPE Community, deployed in 2020- 0x4dFae3690b93c47470b03036A17B23C1Be05127C"
+					/>
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1"
@@ -126,12 +147,12 @@ export default function Home() {
 				<div className={styles.header}>
 					<div className={styles.logo}>
 						<Image
-							src="/logo.jpg"
-							alt="WojakFarm Logo"
+							src="/logo.png"
+							alt="PEPE Logo"
 							height="32"
 							width="32"
 						/>
-						<span> wojak.farm</span>
+						<span> PEPE</span>
 					</div>
 					<div className={styles.buttons}>
 						<div
@@ -158,11 +179,11 @@ export default function Home() {
 			<main className={styles.main}>
 				<div className={styles.wrapper}>
 					<div className={styles.container}>
-						<h1>Wojak.farm - WOJAK</h1>
+						<h1>Pepe - PEPE</h1>
 						<div className={styles.content}>
 							<ul>
 								<li>
-									Welcome to wojak.farm. The oldest WOJAK community on Ethereum!
+									Welcome to the OG Pepe, The oldest PEPE community on Ethereum!
 								</li>
 								<li>
 									Click{" "}
@@ -238,7 +259,8 @@ export default function Home() {
 					</div>
 				</div>
                 <div className={styles.chartSwapperContainer}>
-                    <DextChart />
+				<DextChartV2 />
+				<DextChartV3 />
                     <UniSwapper />
                 </div>
 

@@ -1,6 +1,6 @@
 {
-	"name": "wojakfarm",
-	"homepage": "https://wojak.farm/",
+	"name": "ogpepe",
+	"homepage": "https://ogpepe.io/",
 	"version": "0.1.1",
 	"scripts": {
 		"dev": "next dev",
