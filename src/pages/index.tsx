@@ -6,7 +6,7 @@ import { useAccount, useConnect, useContractRead } from 'wagmi';
 import Link from 'next/link';
 import { ABIWojak } from '../contracts/ABIS';
 import { formatUnits, BigNumberish } from "ethers";
-import DEX from "@/components/dex";
+import DEX from "@/components/DEX";
 import NFTCollection from "@/components/NFTCollection";
 import Intro from "@/components/Intro";
 

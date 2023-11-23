@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '@/styles/Intro.module.css'; // Adjust the path as necessary
+import Image from 'next/image';
 
 const Intro = () => {
   return (
@@ -13,7 +14,7 @@ const Intro = () => {
       <div className={styles.content}>
         <div className={styles.logoSection}>
           {/* Replace with the path to your actual logo */}
-          <img src="/logo.png" alt="The Original Pepe Logo" className={styles.logo} />
+          <Image src="/logo.png" width={600} height={600} alt="The Original Pepe Logo" className={styles.logo} />
         </div>
         <div className={styles.textSection}>
           <p className={styles.supply}>

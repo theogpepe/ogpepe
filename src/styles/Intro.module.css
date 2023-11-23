@@ -41,7 +41,6 @@
   
   .logo {
     width: 100%; /* Logo takes full width of its container */
-    max-width: 150px; /* Adjust max width as needed */
     height: auto; /* Maintain aspect ratio */
   }
   

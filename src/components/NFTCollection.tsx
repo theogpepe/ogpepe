@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from "@/styles/NFTCollection.module.css";
+import Image from 'next/image';
+
 
 const NFTCollection = () => {
   const nfts = Array.from({ length: 9 }, (_, i) => ({
@@ -20,7 +22,7 @@ const NFTCollection = () => {
           <div key={index} className={styles.content}>
             <div className={styles.imageContainer}>
               <a href={nft.link} target="_blank" rel="noopener noreferrer">
-                <img src={nft.src} alt={`NFT ${nft.id}`} className={styles.image} />
+                <Image src={nft.src} alt={`NFT ${nft.id}`} width={200} height={200} className={styles.image} />
               </a>
             </div>
             <h2 className={styles.nftTitle}># {nft.id}</h2>
