@@ -10,6 +10,10 @@
     width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
+    url('/nft_bg.jpg');    background-size: cover; /* Ensure it covers the entire element */
+    background-position: center; /* Center the background image */
   }
 
   .titleSection {
