@@ -58,7 +58,7 @@ export const UniSwapper = () => {
 export const DEX = () => {
     return (
         <div className={styles.chartSwapperContainer}>
-            <h2>Pepe's DEX</h2>
+            <h2>Pepe DEX</h2>
             <DextChartV2 />
             <DextChartV3 />
             <UniSwapper />
