@@ -1,0 +1,92 @@
+/* Intro.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px; /* Increase padding around the logo */
+    color: #fff;
+    border-radius: 8px;
+    margin: 20px;
+  }
+  
+  .header {
+    text-align: center; /* Center the title and subtitle */
+    margin-bottom: 20px; /* Space between header and content */
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure content takes full width */
+  }
+  
+  .logoSection {
+    flex: 0 0 150px; /* Adjust size of the logo */
+    display: flex;
+    justify-content: center; /* Center logo inside this section */
+    padding: 0 20px; /* Add padding around the logo */
+  }
+  
+  .logo {
+    width: 100%; /* Logo takes full width of its container */
+    max-width: 150px; /* Adjust max width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .textSection {
+    flex: 1; /* Take remaining space */
+    padding: 0 20px; /* Add padding around the text */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .supply {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .addressButton {
+    display: inline-block;
+    background-color: #444; /* Slightly brighter background */
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+  }
+  
+  .address {
+    color: #fff;
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Make the address bold */
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+  
+    .textSection {
+      text-align: center; /* Center text on smaller screens */
+    }
+  
+    .logoSection {
+      padding-bottom: 20px; /* Add space below logo on smaller screens */
+    }
+  }
+  

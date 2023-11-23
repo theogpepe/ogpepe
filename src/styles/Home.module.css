@@ -51,7 +51,7 @@
 	margin-top: 1.5rem;
 }
 
-.footer {
+.wrapperFooter {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -64,21 +64,21 @@
 	color: var(--color-grey-700);
 }
 
-.footer svg {
+.wrapperFooter svg {
 	margin-right: 0.25rem;
 }
 
-.footer a {
+.wrapperFooter a {
 	color: inherit;
 	text-decoration: none;
 	text-underline-offset: 0.125rem;
 }
 
-.footer a:hover {
+.wrapperFooter a:hover {
 	color: var(--color-grey-500);
 }
 
-.footer svg:has(+ a:hover) {
+.wrapperFooter svg:has(+ a:hover) {
 	color: var(--color-grey-500) !important;
 }
 
@@ -194,15 +194,41 @@ span.button:hover {
 	}
 }
 
-.chartSwapperContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Adjust the space between components */
-}
+/* ... existing styles ... */
 
-@media (max-width: 600px) { /* Adjust the breakpoint as needed */
-    .chartSwapperContainer {
-        flex-direction: column;
-    }
-}
+.spacer {
+	height: 50px; /* Or whatever height you prefer for spacing */
+  }
+  
+  .footer {
+	width: 100%;
+	padding: 20px 0;
+	background-color: #1a1a1a; /* Or any other color you prefer */
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+  }
+  
+  .footerLink {
+	color: #fff; /* White text for links */
+	background-color: #333; /* Slightly brighter background */
+	padding: 10px 15px;
+	border-radius: 20px;
+	text-decoration: none; /* Removes underline */
+	transition: background-color 0.3s; /* Smooth background color transition on hover */
+  }
+  
+  .footerLink:hover {
+	background-color: #444; /* Darken background on hover */
+  }
+  
+  /* Responsive adjustments for footer links */
+  @media (max-width: 768px) {
+	.footer {
+	  flex-direction: column;
+	}
+  }
+  
+  /* ... other responsive adjustments ... */
+  
