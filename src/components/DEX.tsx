@@ -57,13 +57,14 @@ export const UniSwapper = () => {
 
 export const DEX = () => {
     return (
-        <div className={styles.chartSwapperContainer}>
-            <h2>Pepe DEX</h2>
-            <DextChartV2 />
-            <DextChartV3 />
-            <UniSwapper />
+        <div className={styles.dexContainer}>
+            <h2 className={styles.dexHeading}>Pepe DEX</h2>
+            <div className={styles.chartSwapperContainer}>
+                <DextChartV2 />
+                <DextChartV3 />
+                <UniSwapper />
+            </div>
         </div>
     );
 };
-
 export default DEX;

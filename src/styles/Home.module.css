@@ -203,7 +203,6 @@ span.button:hover {
   .footer {
 	width: 100%;
 	padding: 20px 0;
-	background-color: #1a1a1a; /* Or any other color you prefer */
 	display: flex;
 	justify-content: center;
 	gap: 20px;
@@ -227,6 +226,8 @@ span.button:hover {
   @media (max-width: 768px) {
 	.footer {
 	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
 	}
   }
   

@@ -1,10 +1,25 @@
-.chartSwapperContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Adjust the space between components */
-}
+/* DEX.module.css */
 
+.dexContainer {
+    text-align: center; /* Center everything in dexContainer */
+  }
+  
+  .dexHeading {
+    font-size: 2rem;
+    margin-bottom: 20px; /* Add some space below the heading */
+  }
+  
+  .chartSwapperContainer {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Stretch items to fill the container height */
+    gap: 20px; /* Spacing between chart components */
+    flex-wrap: wrap; /* Allow items to wrap */
+    /* Rest of your styling for chartSwapperContainer */
+  }
+  
+  /* Rest of the styles */
+  
 @media (max-width: 600px) { /* Adjust the breakpoint as needed */
     .chartSwapperContainer {
         flex-direction: column;

@@ -14,7 +14,14 @@ const Intro = () => {
       <div className={styles.content}>
         <div className={styles.logoSection}>
           {/* Replace with the path to your actual logo */}
-          <Image src="/logo.png" width={600} height={600} alt="The Original Pepe Logo" className={styles.logo} />
+          <Image
+  src="/logo.png"
+  alt="The Original Pepe Logo"
+  layout="responsive"
+  width={1} // These can be any ratio as long as their
+  height={1} // ratio is equal to your desired aspect ratio
+  className={styles.logo}
+  />
         </div>
         <div className={styles.textSection}>
           <p className={styles.supply}>
@@ -31,7 +38,7 @@ const Intro = () => {
             </a>
           </div>
           <p className={styles.description}>
-            Deployed over 3 years ago, Pepe is the original PEPE. On 10/10/2023, for his 3rd birthday, the community decided to continue building on a historic narrative that will never fade. The OG deployed Pepe will live on as one of the most renowned meme tokens of all time. The OG Pepe is a createBuilderStatusReporter, a family, and a safe space to vibe.
+            Deployed over 3 years ago, Pepe is the original PEPE. On 10/10/2023, for his 3rd birthday, the community decided to continue building on a historic narrative that will never fade. The OG deployed Pepe will live on as one of the most renowned meme tokens of all time. The OG Pepe is a culture, a family, and a safe space to vibe.
           </p>
         </div>
       </div>
