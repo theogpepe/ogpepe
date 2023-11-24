@@ -2,6 +2,7 @@
 	display: grid;
 	place-items: center;
 	height: 100%;
+	padding-top: 80px; /* Adjust this value to match your header's height */
 	background: linear-gradient(
 			to bottom,
 			var(--color-bg),
@@ -10,6 +11,28 @@
 		),
 		radial-gradient(circle, transparent 0%, var(--color-bg) 70%);
 }
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	padding-bottom: 1.75rem;
+	position: fixed; /* Keeps the header fixed at the top */
+	top: 0; /* Aligns the header at the top */
+	left: 0; /* Aligns the header to the left */
+	right: 0; /* Ensures the header spans the full width */
+	z-index: 111111; /* Ensures the header stays above other content */
+	background-color: var(--color-bg); /* Adjust as needed, maybe same as page background */
+	/* Rest of your styling */
+  }
+
+.header .buttons {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
 
 .wrapper {
 	position: relative;
@@ -192,20 +215,6 @@ span.button:hover {
 	color: var(--color-grey-100);
 }
 
-.header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem;
-	padding-bottom: 1.75rem;
-}
-
-.header .buttons {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-}
-
 .backdrop {
 	position: absolute;
 	top: 0;
@@ -226,8 +235,6 @@ span.button:hover {
 		background-position: 200% 50%;
 	}
 }
-
-/* ... existing styles ... */
 
 .spacer {
 	height: 50px; /* Or whatever height you prefer for spacing */
@@ -264,5 +271,27 @@ span.button:hover {
 	}
   }
   
-  /* ... other responsive adjustments ... */
+  .logoContainer {
+	display: flex;
+	align-items: center;
+	/* Add any additional styling as needed */
+  }
+  
+  .logoTextContainer {
+	margin-left: 10px;
+  }
+  
+  .logoTitle {
+	font-size: 28px; /* Increased size for the main title */
+	color: #000000; /* Black color for the title */
+	margin: 0;
+	font-weight: bold;
+  }
+  
+  .logoSubtitle {
+	font-size: 18px; /* Larger size for the subtitle */
+	color: #000000; /* Black color for the subtitle */
+	margin: 0;
+	font-weight: bold; /* Making subtitle bold */
+  }
   

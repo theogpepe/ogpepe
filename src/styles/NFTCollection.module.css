@@ -71,6 +71,7 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
+    z-index: 1;
   }
   
   .image:hover {

@@ -32,7 +32,7 @@ const projectId = process.env.NEXT_PUBLIC_PROJECT_ID || "";
 
 const metadata = {
 	name: "The OG Pepe",
-	description: "The home of the Original PEPE Community, deployed in 2020- 0x4dFae3690b93c47470b03036A17B23C1Be05127C",
+	description: "The home of the Original PEPE Community, deployed in 2020 - 0x4dFae3690b93c47470b03036A17B23C1Be05127C",
 	url: "https://ogpepe.io",
 	icons: ["https://ogpepe.io/logo.png"],
 };

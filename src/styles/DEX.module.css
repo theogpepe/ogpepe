@@ -15,7 +15,7 @@
     align-items: stretch; /* Stretch items to fill the container height */
     gap: 20px; /* Spacing between chart components */
     flex-wrap: wrap; /* Allow items to wrap */
-    /* Rest of your styling for chartSwapperContainer */
+    z-index: 1;
   }
   
   /* Rest of the styles */

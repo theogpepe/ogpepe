@@ -9,6 +9,7 @@ import { formatUnits, BigNumberish } from "ethers";
 import DEX from "@/components/DEX";
 import NFTCollection from "@/components/NFTCollection";
 import Intro from "@/components/Intro";
+import CoinGeckoRequestInfo from '@/components/CG';
 
 
 export default function Home() {
@@ -110,14 +111,17 @@ export default function Home() {
 			</Head>
 			<header>
 				<div className={styles.header}>
-					<div className={styles.logo}>
+					<div className={styles.logoContainer}>
 						<Image
 							src="/logo.png"
 							alt="PEPE Logo"
-							height="32"
-							width="32"
+							height="60"  // Increased size for more prominence
+							width="60"
 						/>
-						<span> PEPE</span>
+						<div className={styles.logoTextContainer}>
+							<h1 className={styles.logoTitle}>OG Pepe</h1>
+							<p className={styles.logoSubtitle}>The Original PEPE</p>
+						</div>
 					</div>
 					<div className={styles.buttons}>
 						<w3m-network-button />
@@ -129,6 +133,8 @@ export default function Home() {
 				<div className={styles.spacer} /> {/* New spacer element */}
 
 				<Intro />
+				<div className={styles.spacer} /> {/* New spacer element */}
+				<CoinGeckoRequestInfo />
 				<div className={styles.spacer} /> {/* New spacer element */}
 
 				<div className={styles.wrapper}>

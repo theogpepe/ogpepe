@@ -15,13 +15,13 @@ const Intro = () => {
         <div className={styles.logoSection}>
           {/* Replace with the path to your actual logo */}
           <Image
-  src="/logo.png"
-  alt="The Original Pepe Logo"
-  layout="responsive"
-  width={1} // These can be any ratio as long as their
-  height={1} // ratio is equal to your desired aspect ratio
-  className={styles.logo}
-  />
+            src="/logo.png"
+            alt="The Original Pepe Logo"
+            layout="responsive"
+            width={1} // These can be any ratio as long as their
+            height={1} // ratio is equal to your desired aspect ratio
+            className={styles.logo}
+          />
         </div>
         <div className={styles.textSection}>
           <p className={styles.supply}>
@@ -38,7 +38,13 @@ const Intro = () => {
             </a>
           </div>
           <p className={styles.description}>
-            Deployed over 3 years ago, Pepe is the original PEPE. On 10/10/2023, for his 3rd birthday, the community decided to continue building on a historic narrative that will never fade. The OG deployed Pepe will live on as one of the most renowned meme tokens of all time. The OG Pepe is a culture, a family, and a safe space to vibe.
+            PEPE Token, established in 2020, stands as an early meme token with a strong community base.
+          </p>
+          <p className={styles.description}>
+            It's designed for easy transactions and active community engagement, centered around the iconic PEPE meme.
+          </p>
+          <p className={styles.description}>
+            With a three-year journey in the crypto world, PEPE merges fun with functionality, marking it as a piece of crypto heritage.
           </p>
         </div>
       </div>
