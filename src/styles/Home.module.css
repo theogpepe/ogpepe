@@ -48,8 +48,41 @@
 
 
 .content {
-	margin-top: 1.5rem;
-}
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+	margin-bottom: 20px; /* Spacing between sections */
+  }
+  
+  .content h2 {
+	color: #c9c9c9;
+	margin-bottom: 15px;
+  }
+  
+  .infoRow {
+	border: 1px solid #ddd; /* Subtle borders for each row */
+	padding: 10px 15px;
+	border-radius: 5px;
+	margin-bottom: 10px; /* Spacing between rows */
+	display: flex;
+	justify-content: space-between; /* Align content and value */
+	align-items: center;
+  }
+  
+  .infoRow span {
+	font-weight: bold;
+	color: #555;
+	margin-right: 10px;
+  }
+  
+  .infoRow .value {
+	color: #1a73e8; /* Highlight values */
+	font-weight: bold;
+  }
+  
+  .infoRow.balanceRow {
+	margin-bottom: 30px; /* Increased bottom margin for Balance row */
+  }
 
 .wrapperFooter {
 	display: flex;

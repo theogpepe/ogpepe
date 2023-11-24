@@ -25,7 +25,7 @@ const Intro = () => {
         </div>
         <div className={styles.textSection}>
           <p className={styles.supply}>
-            Supply: 46,832 | 0% Tax | Deployed 10/10/2020
+            Supply: 46,832 | Circulating: 37,321 | 0% Tax | Deployed 10/10/2020
           </p>
           <div className={styles.addressButton}>
             <a
