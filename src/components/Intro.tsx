@@ -41,7 +41,7 @@ const Intro = () => {
             PEPE Token, established in 2020, stands as an early meme token with a strong community base.
           </p>
           <p className={styles.description}>
-            It's designed for easy transactions and active community engagement, centered around the iconic PEPE meme.
+            It is designed for easy transactions and active community engagement, centered around the iconic PEPE meme.
           </p>
           <p className={styles.description}>
             With a three-year journey in the crypto world, PEPE merges fun with functionality, marking it as a piece of crypto heritage.
