@@ -44,6 +44,10 @@ body {
 	font-family: var(--font-base);
 	background-color: var(--color-bg);
 	color: var(--color-grey-100);
+	background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
+    url('/nft_bg.jpg');    background-size: cover; /* Ensure it covers the entire element */
+    background-position: center; /* Center the background image */
 }
 
 pre,

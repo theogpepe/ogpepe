@@ -7,9 +7,7 @@ import Link from 'next/link';
 import { ABIWojak } from '../contracts/ABIS';
 import { formatUnits, BigNumberish } from "ethers";
 import DEX from "@/components/DEX";
-import NFTCollection from "@/components/NFTCollection";
 import Intro from "@/components/Intro";
-import CoinGeckoRequestInfo from '@/components/CG';
 
 
 export default function Home() {
@@ -134,8 +132,6 @@ export default function Home() {
 
 				<Intro />
 				<div className={styles.spacer} /> {/* New spacer element */}
-				<CoinGeckoRequestInfo />
-				<div className={styles.spacer} /> {/* New spacer element */}
 
 				<div className={styles.wrapper}>
 					<div className={styles.container}>
@@ -191,9 +187,6 @@ export default function Home() {
 				<div className={styles.spacer} /> {/* New spacer element */}
 
 				<DEX />
-				<div className={styles.spacer} /> {/* New spacer element */}
-
-				<NFTCollection />
 				<div className={styles.spacer} /> {/* New spacer element */}
 
 				<footer className={styles.footer}>
