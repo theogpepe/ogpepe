@@ -133,57 +133,7 @@ export default function Home() {
 				<Intro />
 				<div className={styles.spacer} /> {/* New spacer element */}
 
-				<div className={styles.wrapper}>
-					<div className={styles.container}>
-						{isConnected ? (
-							<div className={styles.content}>
-								<h2>Blockchain Info</h2>
-								<div className={`${styles.infoRow} ${styles.balanceRow}`}>
-									<span>Balance:</span>
-									<div className="value">{userBalance.toFixed(2)} PEPE</div>
-								</div>
-								<div className={styles.infoRow}>
-									<span>Total Supply:</span>
-									<div className="value">{totalSupply.toFixed(2)}</div>
-								</div>
-								<div className={styles.infoRow}>
-									<span>Burned:</span>
-									<div className="value">{burned.toFixed(2)}</div>
-								</div>
-								<div className={styles.infoRow}>
-									<span>Circulating: </span>
-									<div className="value">{circulatingSupply.toFixed(2)}</div>
-								</div>
-							</div>
-						) : (
-							<div className={styles.content}>
-								<h2>Connect to Blockchain</h2>
-								<p>Please connect to view blockchain information.</p>
-								{/* Render connect button or logic */}
-							</div>
-						)}
-					</div>
-					<div className={styles.wrapperFooter}>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							strokeWidth={1.5}
-							stroke="currentColor"
-							height={16}
-							width={16}
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"
-							/>
-						</svg>
-						<Link href="/info">
-							Check out the full information here
-						</Link>
-					</div>
-				</div>
+
 				<div className={styles.spacer} /> {/* New spacer element */}
 
 				<DEX />

@@ -1,27 +1,81 @@
 /* DEX.module.css */
-
 .dexContainer {
-    text-align: center; /* Center everything in dexContainer */
-  }
-  
-  .dexHeading {
-    font-size: 2rem;
-    margin-bottom: 20px; /* Add some space below the heading */
-  }
-  
+  text-align: center;
+}
+
+.dexHeading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff; /* White text for headings */
+}
+
+.chartSwapperContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.poolTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px; /* Add rounded corners */
+  overflow: hidden; /* Ensure the rounded corners are visible */
+  background-color: #333; /* Dark background for the table */
+  color: #fff; /* White text for table content */
+  margin-bottom: 20px; /* Space below the table */
+}
+
+.poolTable th, .poolTable td {
+  padding: 15px;
+  border: 1px solid #444; /* Slightly lighter border for distinction */
+}
+
+.poolTable th {
+  background-color: #222; /* Even darker background for headers */
+}
+
+.poolTable tfoot td {
+  font-size: 1.2rem; /* Larger font size for totals */
+  color: #4CAF50; /* Green color for totals */
+}
+
+/* Styling for the pool links */
+.poolTable a {
+  color: white; /* Default link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.poolTable a:hover {
+  color: #28a745; /* Green color on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Highlight changes in totals */
+@keyframes highlightChange {
+  0% { color: red; }
+  100% { color: #4CAF50; }
+}
+
+.highlightChange {
+  animation: highlightChange 2s; /* Animate the color change */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
   .chartSwapperContainer {
-    display: flex;
-    justify-content: center;
-    align-items: stretch; /* Stretch items to fill the container height */
-    gap: 20px; /* Spacing between chart components */
-    flex-wrap: wrap; /* Allow items to wrap */
-    z-index: 1;
+      flex-direction: column;
   }
-  
-  /* Rest of the styles */
-  
-@media (max-width: 600px) { /* Adjust the breakpoint as needed */
-    .chartSwapperContainer {
-        flex-direction: column;
-    }
+}
+
+@media (max-width: 768px) {
+  .poolTable th, .poolTable td {
+      padding: 10px;
+  }
+
+  .poolTable tfoot td {
+      font-size: 1rem;
+  }
 }
