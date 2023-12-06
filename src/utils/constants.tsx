@@ -5,7 +5,7 @@ export const MY_TOKEN_LIST = [
     "symbol": "PEPE",
     "decimals": 18,
     "chainId": 1,
-    "logoURI": "https://ogpepe.io/logo.png"
+    "logoURI": "https://ogpepe.io/logo.jpg"
   },
     {
     "name": "Tether USD",

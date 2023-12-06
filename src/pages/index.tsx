@@ -111,7 +111,7 @@ export default function Home() {
 				<div className={styles.header}>
 					<div className={styles.logoContainer}>
 						<Image
-							src="/logo.png"
+							src="/logo.jpg"
 							alt="PEPE Logo"
 							height="60"  // Increased size for more prominence
 							width="60"
