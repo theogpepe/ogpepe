@@ -15,67 +15,184 @@
   align-items: stretch;
   gap: 20px;
   flex-wrap: wrap;
-  z-index: 1;
 }
 
 .poolTable {
   width: 100%;
   border-collapse: collapse;
-  border-radius: 8px; /* Add rounded corners */
-  overflow: hidden; /* Ensure the rounded corners are visible */
-  background-color: #66974C; /* Dark background for the table */
-  color: #fff; /* White text for table content */
-  margin-bottom: 20px; /* Space below the table */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensures rounded corners */
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff; /* White text */
+  margin-bottom: 20px;
 }
 
 .poolTable th, .poolTable td {
   padding: 15px;
-  background-color: rgba(51, 51, 51, 0.3); /* Darker background with 50% opacity */
-
+  background-color: rgba(0, 0, 0, 0.6);
 }
-
 
 .poolTable tfoot td {
-  font-size: 1.2rem; /* Larger font size for totals */
-  color: #66974C; /* White color for text */
-  background-color: rgba(51, 51, 51, 0.9); /* Darker background with 50% opacity */
+  font-size: 1.2rem; /* Larger text for totals */
+  color: #fff; /* White text */
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-
-/* Styling for the pool links */
+/* Pool links styling */
 .poolTable a {
-  color: #000; /* Default link color */
-  text-decoration: none; /* Remove underline */
+  color: #fff; /* White text */
+  text-decoration: none;
 }
 
 .poolTable a:hover {
-  color: #fff; /* Green color on hover */
-  text-decoration: underline; /* Add underline on hover */
+  color: #3e8e41; /* Green on hover */
+  text-decoration: underline;
 }
 
-/* Highlight changes in totals */
+/* Animation for totals */
 @keyframes highlightChange {
   0% { color: red; }
   100% { color: #4CAF50; }
 }
 
 .highlightChange {
-  animation: highlightChange 2s; /* Animate the color change */
+  animation: highlightChange 2s;
 }
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .chartSwapperContainer {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
 
 @media (max-width: 768px) {
   .poolTable th, .poolTable td {
-      padding: 10px;
+    padding: 10px;
   }
 
   .poolTable tfoot td {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 }
+.container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff; /* White text */
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 800px; /* Adjust width as needed */
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logoAddress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoSection {
+  margin-right: 15px;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.addressLink {
+  color: #4CAF50; /* Green link */
+  text-decoration: none;
+}
+
+.addressLink:hover {
+  text-decoration: underline;
+}
+
+.infoSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 15px;
+  text-align: left;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.infoLabel {
+  font-size: 1rem;
+  color: #aaa; /* Lighter color for the label */
+  margin-right: 10px;
+}
+
+.keyInfo {
+  font-size: 1.2rem;
+  background-color: #66974C; /* Slightly darker background for each info */
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* ... rest of the existing styles */
+
+@media (max-width: 768px) {
+  /* ... responsive adjustments */
+}
+@media (max-width: 768px) {
+  .infoSection {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}
+
+.addressSection a {
+  color: black;
+  background-color: #66974C; /* Green background */
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  margin: 10px;
+
+}
+
+.addressSection a:hover {
+  background-color: #3e8e41; /* Darker green on hover */
+}
+
+.timer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #66974C;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.infoWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.infoSection {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+

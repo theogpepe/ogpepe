@@ -3,6 +3,81 @@ import { SwapWidget } from '@uniswap/widgets';
 import '@uniswap/widgets/fonts.css';
 import { MY_TOKEN_LIST } from '../utils/constants';
 import styles from "@/styles/DEX.module.css";
+import Image from 'next/image';
+
+const TimeSinceDeployment = () => {
+    const [timeSinceDeployment, setTimeSinceDeployment] = useState('');
+
+    useEffect(() => {
+        const deploymentTimestamp = 1602340728; // Replace with actual deployment timestamp
+        const deploymentTime = new Date(deploymentTimestamp * 1000);
+
+        const interval = setInterval(() => {
+            const now = new Date();
+            const timeDifference = now.getTime() - deploymentTime.getTime();
+
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            setTimeSinceDeployment(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <div className={styles.timerInfo}>
+            <p className={styles.timer}>Age: {timeSinceDeployment}</p>
+        </div>
+    );
+};
+
+interface IntroProps {
+    price: number;
+    marketCap: number;
+}
+const Intro: React.FC<IntroProps> = ({ price, marketCap }) => {
+    return (
+        <div className={styles.container}>
+            <div className={styles.header}>
+                <div className={styles.logoAddress}>
+                    <div className={styles.logoSection}>
+                        <Image
+                            src="/logo.png"
+                            alt="The Original Pepe Logo"
+                            width={64}
+                            height={64}
+                        />
+                    </div>
+                    <h1 className={styles.title}>The Original Pepe</h1>
+                </div>
+                <div className={styles.addressSection}>
+                    <a href="https://etherscan.io/token/0x4dfae3690b93c47470b03036A17B23C1Be05127C"
+                        target="_blank" rel="noopener noreferrer"
+                        className={styles.addressLink}>
+                        0x4dFae3690b93c47470b03036A17B23C1Be05127C
+                    </a>
+                </div>
+            </div>
+            <div className={styles.infoSection}>
+                <div className={styles.infoItem}>
+                    <span className={styles.infoLabel}>Price:</span>
+                    <span className={styles.keyInfo}>{formatCurrency(price.toString())}</span>
+                </div>
+                <div className={styles.infoItem}>
+                    <span className={styles.infoLabel}>Market Cap:</span>
+                    <span className={styles.keyInfo}>{formatCurrency(marketCap.toString())}</span>
+                </div>
+            </div>
+            <TimeSinceDeployment />
+
+        </div>
+    );
+};
+
+
 
 
 
@@ -88,60 +163,59 @@ const PoolInfo: React.FC<{ pools: Pool[] }> = ({ pools }) => {
 
     return (
         <div className={styles.wrapper}>
-					<div className={styles.container}>
-        <table className={styles.poolTable}>
-            <thead>
-                <tr>
-                    <th>Pool Name</th>
-                    <th>Pool Address (Etherscan Link)</th>
-                    <th>PEPE Price</th>
-                    <th>24h Vol</th>
-                    <th>Liquidity</th>
-                    <th>FDV</th>
-                    <th>Circulating </th>
-                    <th>24h Price Change (%)</th>
-                    <th>Pool Type (V2/V3)</th>
-                    {/* Additional headers as needed */}
-                </tr>
-            </thead>
-            <tbody>
-                {pools.map((pool) => (
-                    <tr key={pool.id}>
-                        <td>{pool.attributes.name}</td>
-                        <td>
-                            <a href={`https://etherscan.io/address/${pool.attributes.address}`} target="_blank" rel="noopener noreferrer">
-                                {pool.attributes.address}
-                            </a>
-                        </td>
-                        <td>{parseFloat(pool.attributes.base_token_price_usd).toFixed(2)} $</td>
-                        <td>{formatCurrency(pool.attributes.volume_usd.h24)}</td>
-        <td>{formatCurrency(pool.attributes.reserve_in_usd)}</td>
-        <td>{formatCurrency(pool.attributes.fdv_usd)}</td>
-        <td>{calculateCirculating(pool.attributes.fdv_usd)}</td>
+                <table className={styles.poolTable}>
+                    <thead>
+                        <tr>
+                            <th>Pool Name</th>
+                            <th>Pool Address (Etherscan Link)</th>
+                            <th>PEPE Price</th>
+                            <th>24h Vol</th>
+                            <th>Liquidity</th>
+                            <th>FDV</th>
+                            <th>Circulating </th>
+                            <th>24h Price Change (%)</th>
+                            <th>Pool Type (V2/V3)</th>
+                            {/* Additional headers as needed */}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {pools.map((pool) => (
+                            <tr key={pool.id}>
+                                <td>{pool.attributes.name}</td>
+                                <td>
+                                    <a href={`https://etherscan.io/address/${pool.attributes.address}`} target="_blank" rel="noopener noreferrer">
+                                        {pool.attributes.address}
+                                    </a>
+                                </td>
+                                <td>{parseFloat(pool.attributes.base_token_price_usd).toFixed(2)} $</td>
+                                <td>{formatCurrency(pool.attributes.volume_usd.h24)}</td>
+                                <td>{formatCurrency(pool.attributes.reserve_in_usd)}</td>
+                                <td>{formatCurrency(pool.attributes.fdv_usd)}</td>
+                                <td>{calculateCirculating(pool.attributes.fdv_usd)}</td>
 
-                        <td>{parseFloat(pool.attributes.price_change_percentage.h24).toFixed(2)}%</td>
-                        <td>{pool.relationships.dex.data.id === 'uniswap_v3' ? 'V3' : 'V2'}</td>
-                        {/* Additional columns as needed */}
-                    </tr>
-                ))}
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td>Totals/Averages</td>
-                    <td></td> {/* Adjust colspan as per the number of columns */}
-                    <td>{averageBasePrice.toFixed(2)} $</td>
+                                <td>{parseFloat(pool.attributes.price_change_percentage.h24).toFixed(2)}%</td>
+                                <td>{pool.relationships.dex.data.id === 'uniswap_v3' ? 'V3' : 'V2'}</td>
+                                {/* Additional columns as needed */}
+                            </tr>
+                        ))}
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Totals/Averages</td>
+                            <td></td> {/* Adjust colspan as per the number of columns */}
+                            <td>{averageBasePrice.toFixed(2)} $</td>
 
-                    <td>{formatCurrency(totalVolume.toString())}</td>
-    <td>{formatCurrency(totalReserve.toString())}</td>
-    <td>{formatCurrency(averageFdvPrice.toString())}</td>
-    <td>{calculateCirculating(averageFdvPrice.toString())}</td>
+                            <td>{formatCurrency(totalVolume.toString())}</td>
+                            <td>{formatCurrency(totalReserve.toString())}</td>
+                            <td>{formatCurrency(averageFdvPrice.toString())}</td>
+                            <td>{calculateCirculating(averageFdvPrice.toString())}</td>
 
-    <td></td> {/* Adjust for remaining columns */}
-    <td></td> {/* Adjust for remaining columns */}
-                </tr>
-            </tfoot>
-        </table>
-        </div></div>
+                            <td></td> {/* Adjust for remaining columns */}
+                            <td></td> {/* Adjust for remaining columns */}
+                        </tr>
+                    </tfoot>
+                </table>
+        </div>
     );
 };
 
@@ -197,19 +271,40 @@ export const UniSwapper = () => {
     );
 }
 
+// In DEX component
 export const DEX = () => {
     const [poolsData, setPoolsData] = useState([]);
+    const [averageBasePrice, setAverageBasePrice] = useState(0);
+    const [totalVolume, setTotalVolume] = useState(0);
+    const [totalReserve, setTotalReserve] = useState(0);
+    const [averageFdvPrice, setAverageFdvPrice] = useState(0);
+    const [price, setPrice] = useState(0); // State for price
+    const [marketCap, setMarketCap] = useState(0); // State for market cap
 
     useEffect(() => {
         // Fetch pools data
         fetch('https://api.geckoterminal.com/api/v2/networks/eth/pools/multi/0xA84181F223a042949e9040e42B44C50021802dB6%2C0xAA9b647f42858F2Db441F0AA75843A8E7fd5aFF2')
             .then(response => response.json())
-            .then(data => setPoolsData(data.data))
+            .then(data => {
+                setPoolsData(data.data);
+                // Assuming you get price and market cap data from the API response
+                setPrice(data.data[0].attributes.base_token_price_usd); // Example, set actual path
+                setMarketCap(data.data[0].attributes.fdv_usd); // Example, set actual path
+            })
             .catch(error => console.error('Error fetching pool data:', error));
     }, []);
 
+
+
+
     return (
         <div className={styles.dexContainer}>
+            <Intro
+                price={price}
+                marketCap={marketCap}
+            // ... and other props you need to pass
+            />
+            {/* ... rest of your component */}
             <h2 className={styles.dexHeading}>Pepe DEX</h2>
             <div className={styles.chartSwapperContainer}>
                 <div>

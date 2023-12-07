@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { ABIWojak } from '../contracts/ABIS';
 import { formatUnits, BigNumberish } from "ethers";
 import DEX from "@/components/DEX";
-import Intro from "@/components/Intro";
 
 
 export default function Home() {
@@ -130,7 +129,6 @@ export default function Home() {
 			<main className={styles.main}>
 				<div className={styles.spacer} /> {/* New spacer element */}
 
-				<Intro />
 				<div className={styles.spacer} /> {/* New spacer element */}
 
 
