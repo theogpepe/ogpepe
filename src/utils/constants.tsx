@@ -5,7 +5,15 @@ export const MY_TOKEN_LIST = [
     "symbol": "PEPE",
     "decimals": 18,
     "chainId": 1,
-    "logoURI": "https://ogpepe.io/logo.jpg"
+    "logoURI": "https://ogpepe.io/logo.png"
+  },
+  {
+    "name": "Wojak.farm",
+    "address": "0x4fd2EC9bDd398f8e522d76eA3704F8dBdc1f23f4",
+    "symbol": "WOJAK",
+    "decimals": 18,
+    "chainId": 1,
+    "logoURI": "https://wojak.farm/logo.png"
   },
     {
     "name": "Tether USD",

@@ -15,7 +15,7 @@ const Intro = () => {
         <div className={styles.logoSection}>
           {/* Replace with the path to your actual logo */}
           <Image
-            src="/logo.jpg"
+            src="/logo.png"
             alt="The Original Pepe Logo"
             layout="responsive"
             width={1} // These can be any ratio as long as their
