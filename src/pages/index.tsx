@@ -129,21 +129,9 @@ export default function Home() {
 			<main className={styles.main}>
 				<div className={styles.spacer} /> {/* New spacer element */}
 
-				<div className={styles.spacer} /> {/* New spacer element */}
-
-
-				<div className={styles.spacer} /> {/* New spacer element */}
-
 				<DEX />
 				<div className={styles.spacer} /> {/* New spacer element */}
 
-				<footer className={styles.footer}>
-					<a href="https://twitter.com/ogpeperc20" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Twitter</a>
-					<a href="https://t.me/OgPeperc20" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Telegram</a>
-					<a href="https://www.dextools.io/app/es/ether/pair-explorer/0xa84181f223a042949e9040e42b44c50021802db6" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Dextools</a>
-					<a href="https://app.uniswap.org/#/swap?outputCurrency=0x4dFae3690b93c47470b03036A17B23C1Be05127C" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Uniswap</a>
-					<a href="https://the-og-pepe.medium.com/" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Medium</a>
-				</footer>
 			</main>
 		</>
 	);

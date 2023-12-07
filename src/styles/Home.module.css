@@ -177,37 +177,6 @@ span.button {
 	transition: all 0.1s;
 }
 
-.highlight {
-	position: relative;
-}
-
-.highlightSelected {
-	z-index: 5;
-}
-
-.highlightSelected::after {
-	opacity: 0.5 !important;
-}
-
-.highlight::after {
-	opacity: 0;
-}
-
-.highlight::after {
-	transition: opacity 0.2s;
-	position: absolute;
-	content: "";
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: -1;
-	height: 100%;
-	width: 100%;
-	filter: blur(15px);
-	background: linear-gradient(95deg, #7baff3, #3f8ef6, #0b2c56, #4e70d0);
-	background-size: 200% 200%;
-	animation: animateGlow 5s linear infinite;
-}
 
 span.button:hover {
 	background-color: hsl(var(--h), var(--s), 30%);
@@ -240,36 +209,6 @@ span.button:hover {
 	height: 50px; /* Or whatever height you prefer for spacing */
   }
   
-  .footer {
-	width: 100%;
-	padding: 20px 0;
-	display: flex;
-	justify-content: center;
-	gap: 20px;
-	flex-wrap: wrap;
-  }
-  
-  .footerLink {
-	color: #fff; /* White text for links */
-	background-color: #333; /* Slightly brighter background */
-	padding: 10px 15px;
-	border-radius: 20px;
-	text-decoration: none; /* Removes underline */
-	transition: background-color 0.3s; /* Smooth background color transition on hover */
-  }
-  
-  .footerLink:hover {
-	background-color: #444; /* Darken background on hover */
-  }
-  
-  /* Responsive adjustments for footer links */
-  @media (max-width: 768px) {
-	.footer {
-	  flex-direction: column;
-	  justify-content: center;
-	  align-items: center;
-	}
-  }
   
   .logoContainer {
 	display: flex;
@@ -294,4 +233,5 @@ span.button:hover {
 	margin: 0;
 	font-weight: bold; /* Making subtitle bold */
   }
+
   

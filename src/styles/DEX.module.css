@@ -1,13 +1,29 @@
 /* DEX.module.css */
 .dexContainer {
   text-align: center;
+  padding: 20px; /* Added padding for smaller screens */
+  color: #fff; /* Assuming you want white text color */
 }
 
 .dexHeading {
-  font-size: 2rem;
+  font-size: 2rem; /* Size for larger screens */
   margin-bottom: 20px;
   color: #fff; /* White text for headings */
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dexHeading {
+    font-size: 1.5rem; /* Smaller font size for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .dexHeading {
+    font-size: 1.25rem; /* Even smaller font size for small screens */
+  }
+}
+
 
 .chartSwapperContainer {
   display: flex;
@@ -196,3 +212,42 @@
 }
 
 
+.socialContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #66974C;
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logoImage {
+  height: 40px; /* Adjust size as needed */
+  width: auto;
+  margin: 0 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .infoSection {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .socialContainer, .row {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .logoImage {
+      margin-bottom: 10px; /* Additional margin for wrapped logos */
+  }
+}
