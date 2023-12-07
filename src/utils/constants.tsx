@@ -13,7 +13,7 @@ export const MY_TOKEN_LIST = [
     "symbol": "WOJAK",
     "decimals": 18,
     "chainId": 1,
-    "logoURI": "https://wojak.farm/logo.png"
+    "logoURI": "https://wojak.farm/logo.jpg"
   },
     {
     "name": "Tether USD",
