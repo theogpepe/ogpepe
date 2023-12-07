@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { SwapWidget } from '@uniswap/widgets';
+import { SwapWidget, Theme } from '@uniswap/widgets';
 import '@uniswap/widgets/fonts.css';
 import { MY_TOKEN_LIST } from '../utils/constants';
 import styles from "@/styles/DEX.module.css";
@@ -251,6 +251,19 @@ const DextChartV2 = () => {
     );
 };
 
+const theme: Theme = {
+    primary: '#fff', // A shade of green
+    secondary: '#90EE90', // Light green
+    interactive: '#20672C', // Lime green
+    container: '#20672C', // Pale green
+    module: '#66974C', // Honeydew (very light green)
+    accent: '#3e8e41', // Medium sea green
+    outline: '#8FBC8F', // Dark sea green
+    dialog: '#20672C', // White remains the same
+}
+
+
+
 
 export const UniSwapper = () => {
     const pepe = "0x4dFae3690b93c47470b03036A17B23C1Be05127C";
@@ -266,7 +279,7 @@ export const UniSwapper = () => {
 
     return (
         <div className="Uniswap">
-            <SwapWidget {...widgetConfig} defaultOutputTokenAddress={pepe} />
+            <SwapWidget theme={theme} {...widgetConfig} defaultOutputTokenAddress={pepe} />
         </div>
     );
 }
