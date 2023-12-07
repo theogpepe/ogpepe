@@ -136,7 +136,8 @@ const PoolInfo: React.FC<{ pools: Pool[] }> = ({ pools }) => {
     <td>{formatCurrency(averageFdvPrice.toString())}</td>
     <td>{calculateCirculating(averageFdvPrice.toString())}</td>
 
-                    <td></td> {/* Adjust for remaining columns */}
+    <td></td> {/* Adjust for remaining columns */}
+    <td></td> {/* Adjust for remaining columns */}
                 </tr>
             </tfoot>
         </table>

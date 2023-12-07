@@ -23,33 +23,33 @@
   border-collapse: collapse;
   border-radius: 8px; /* Add rounded corners */
   overflow: hidden; /* Ensure the rounded corners are visible */
-  background-color: #333; /* Dark background for the table */
+  background-color: #66974C; /* Dark background for the table */
   color: #fff; /* White text for table content */
   margin-bottom: 20px; /* Space below the table */
 }
 
 .poolTable th, .poolTable td {
   padding: 15px;
-  border: 1px solid #444; /* Slightly lighter border for distinction */
+  background-color: rgba(51, 51, 51, 0.3); /* Darker background with 50% opacity */
+
 }
 
-.poolTable th {
-  background-color: #222; /* Even darker background for headers */
-}
 
 .poolTable tfoot td {
   font-size: 1.2rem; /* Larger font size for totals */
-  color: #4CAF50; /* Green color for totals */
+  color: #66974C; /* White color for text */
+  background-color: rgba(51, 51, 51, 0.9); /* Darker background with 50% opacity */
 }
+
 
 /* Styling for the pool links */
 .poolTable a {
-  color: white; /* Default link color */
+  color: #000; /* Default link color */
   text-decoration: none; /* Remove underline */
 }
 
 .poolTable a:hover {
-  color: #28a745; /* Green color on hover */
+  color: #fff; /* Green color on hover */
   text-decoration: underline; /* Add underline on hover */
 }
 
