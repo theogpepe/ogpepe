@@ -126,13 +126,7 @@ export default function Home() {
 					</div>
 				</div>
 			</header>
-			<main className={styles.main}>
-				<div className={styles.spacer} /> {/* New spacer element */}
-
-				<DEX />
-				<div className={styles.spacer} /> {/* New spacer element */}
-
-			</main>
+			<DEX />
 		</>
 	);
 }

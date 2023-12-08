@@ -187,25 +187,22 @@ const PoolInfo: React.FC<{ pools: Pool[] }> = ({ pools }) => {
                 <thead>
                     <tr>
                         <th>Pool Name</th>
-                        <th>Pool Address (Etherscan Link)</th>
                         <th>PEPE Price</th>
                         <th>24h Vol</th>
                         <th>Liquidity</th>
                         <th>FDV</th>
                         <th>Circulating </th>
-                        <th>24h Price Change (%)</th>
-                        <th>Pool Type (V2/V3)</th>
+                        <th>24h (%)</th>
                         {/* Additional headers as needed */}
                     </tr>
                 </thead>
                 <tbody>
                     {pools.map((pool) => (
                         <tr key={pool.id}>
-                            <td>{pool.attributes.name}</td>
                             <td>
                                 <a href={`https://etherscan.io/address/${pool.attributes.address}`} target="_blank" rel="noopener noreferrer">
-                                    {pool.attributes.address}
-                                </a>
+                                {pool.attributes.name}
+                                                                </a>
                             </td>
                             <td>{parseFloat(pool.attributes.base_token_price_usd).toFixed(2)} $</td>
                             <td>{formatCurrency(pool.attributes.volume_usd.h24)}</td>
@@ -214,7 +211,6 @@ const PoolInfo: React.FC<{ pools: Pool[] }> = ({ pools }) => {
                             <td>{calculateCirculating(pool.attributes.fdv_usd)}</td>
 
                             <td>{parseFloat(pool.attributes.price_change_percentage.h24).toFixed(2)}%</td>
-                            <td>{pool.relationships.dex.data.id === 'uniswap_v3' ? 'V3' : 'V2'}</td>
                             {/* Additional columns as needed */}
                         </tr>
                     ))}
@@ -222,7 +218,6 @@ const PoolInfo: React.FC<{ pools: Pool[] }> = ({ pools }) => {
                 <tfoot>
                     <tr>
                         <td>Totals/Averages</td>
-                        <td></td> {/* Adjust colspan as per the number of columns */}
                         <td>{averageBasePrice.toFixed(2)} $</td>
 
                         <td>{formatCurrency(totalVolume.toString())}</td>
@@ -230,7 +225,6 @@ const PoolInfo: React.FC<{ pools: Pool[] }> = ({ pools }) => {
                         <td>{formatCurrency(averageFdvPrice.toString())}</td>
                         <td>{calculateCirculating(averageFdvPrice.toString())}</td>
 
-                        <td></td> {/* Adjust for remaining columns */}
                         <td></td> {/* Adjust for remaining columns */}
                     </tr>
                 </tfoot>
