@@ -43,7 +43,15 @@ const Intro: React.FC<IntroProps> = ({ price, marketCap }) => {
     return (
         <div className={styles.container}>
             {/* Header with Title and Address */}
+            <div className={styles.addressSection}>
+                    <a href="https://etherscan.io/token/0x4dfae3690b93c47470b03036A17B23C1Be05127C"
+                        target="_blank" rel="noopener noreferrer"
+                        className={styles.addressLink}>
+                        0x4dFae3690b93c47470b03036A17B23C1Be05127C
+                    </a>
+                </div>
             <div className={styles.header}>
+                
                 <div className={styles.logoAddress}>
                     <div className={styles.logoSection}>
                         <Image
@@ -53,14 +61,16 @@ const Intro: React.FC<IntroProps> = ({ price, marketCap }) => {
                             height={64}
                         />
                     </div>
-                    <h1 className={styles.title}>The Original Pepe</h1>
+                    <h1 className={styles.title}>The Original Pepe </h1>
+                    <div className={styles.logoSection}>
+
+                    <Image
+                            src="/pepe.png"
+                            alt="The Original Pepe Logo"
+                            width={128}
+                            height={128}
+                        />
                 </div>
-                <div className={styles.addressSection}>
-                    <a href="https://etherscan.io/token/0x4dfae3690b93c47470b03036A17B23C1Be05127C"
-                        target="_blank" rel="noopener noreferrer"
-                        className={styles.addressLink}>
-                        0x4dFae3690b93c47470b03036A17B23C1Be05127C
-                    </a>
                 </div>
             </div>
             {/* Main Content with Stats and Social Links */}
@@ -75,8 +85,11 @@ const Intro: React.FC<IntroProps> = ({ price, marketCap }) => {
                         <span className={styles.keyInfo}>{formatCurrency(marketCap.toString())}</span>
                     </div>
                 </div>
-                <SocialLinks />
+                <div className={styles.socialContainer}>
+                    <SocialLinks />
+                </div>
             </div>
+
 
             {/* Timer at the Bottom */}
             <TimeSinceDeployment />
@@ -170,58 +183,58 @@ const PoolInfo: React.FC<{ pools: Pool[] }> = ({ pools }) => {
 
     return (
         <div className={styles.wrapper}>
-                <table className={styles.poolTable}>
-                    <thead>
-                        <tr>
-                            <th>Pool Name</th>
-                            <th>Pool Address (Etherscan Link)</th>
-                            <th>PEPE Price</th>
-                            <th>24h Vol</th>
-                            <th>Liquidity</th>
-                            <th>FDV</th>
-                            <th>Circulating </th>
-                            <th>24h Price Change (%)</th>
-                            <th>Pool Type (V2/V3)</th>
-                            {/* Additional headers as needed */}
+            <table className={styles.poolTable}>
+                <thead>
+                    <tr>
+                        <th>Pool Name</th>
+                        <th>Pool Address (Etherscan Link)</th>
+                        <th>PEPE Price</th>
+                        <th>24h Vol</th>
+                        <th>Liquidity</th>
+                        <th>FDV</th>
+                        <th>Circulating </th>
+                        <th>24h Price Change (%)</th>
+                        <th>Pool Type (V2/V3)</th>
+                        {/* Additional headers as needed */}
+                    </tr>
+                </thead>
+                <tbody>
+                    {pools.map((pool) => (
+                        <tr key={pool.id}>
+                            <td>{pool.attributes.name}</td>
+                            <td>
+                                <a href={`https://etherscan.io/address/${pool.attributes.address}`} target="_blank" rel="noopener noreferrer">
+                                    {pool.attributes.address}
+                                </a>
+                            </td>
+                            <td>{parseFloat(pool.attributes.base_token_price_usd).toFixed(2)} $</td>
+                            <td>{formatCurrency(pool.attributes.volume_usd.h24)}</td>
+                            <td>{formatCurrency(pool.attributes.reserve_in_usd)}</td>
+                            <td>{formatCurrency(pool.attributes.fdv_usd)}</td>
+                            <td>{calculateCirculating(pool.attributes.fdv_usd)}</td>
+
+                            <td>{parseFloat(pool.attributes.price_change_percentage.h24).toFixed(2)}%</td>
+                            <td>{pool.relationships.dex.data.id === 'uniswap_v3' ? 'V3' : 'V2'}</td>
+                            {/* Additional columns as needed */}
                         </tr>
-                    </thead>
-                    <tbody>
-                        {pools.map((pool) => (
-                            <tr key={pool.id}>
-                                <td>{pool.attributes.name}</td>
-                                <td>
-                                    <a href={`https://etherscan.io/address/${pool.attributes.address}`} target="_blank" rel="noopener noreferrer">
-                                        {pool.attributes.address}
-                                    </a>
-                                </td>
-                                <td>{parseFloat(pool.attributes.base_token_price_usd).toFixed(2)} $</td>
-                                <td>{formatCurrency(pool.attributes.volume_usd.h24)}</td>
-                                <td>{formatCurrency(pool.attributes.reserve_in_usd)}</td>
-                                <td>{formatCurrency(pool.attributes.fdv_usd)}</td>
-                                <td>{calculateCirculating(pool.attributes.fdv_usd)}</td>
+                    ))}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Totals/Averages</td>
+                        <td></td> {/* Adjust colspan as per the number of columns */}
+                        <td>{averageBasePrice.toFixed(2)} $</td>
 
-                                <td>{parseFloat(pool.attributes.price_change_percentage.h24).toFixed(2)}%</td>
-                                <td>{pool.relationships.dex.data.id === 'uniswap_v3' ? 'V3' : 'V2'}</td>
-                                {/* Additional columns as needed */}
-                            </tr>
-                        ))}
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>Totals/Averages</td>
-                            <td></td> {/* Adjust colspan as per the number of columns */}
-                            <td>{averageBasePrice.toFixed(2)} $</td>
+                        <td>{formatCurrency(totalVolume.toString())}</td>
+                        <td>{formatCurrency(totalReserve.toString())}</td>
+                        <td>{formatCurrency(averageFdvPrice.toString())}</td>
+                        <td>{calculateCirculating(averageFdvPrice.toString())}</td>
 
-                            <td>{formatCurrency(totalVolume.toString())}</td>
-                            <td>{formatCurrency(totalReserve.toString())}</td>
-                            <td>{formatCurrency(averageFdvPrice.toString())}</td>
-                            <td>{calculateCirculating(averageFdvPrice.toString())}</td>
-
-                            <td></td> {/* Adjust for remaining columns */}
-                            <td></td> {/* Adjust for remaining columns */}
-                        </tr>
-                    </tfoot>
-                </table>
+                        <td></td> {/* Adjust for remaining columns */}
+                        <td></td> {/* Adjust for remaining columns */}
+                    </tr>
+                </tfoot>
+            </table>
         </div>
     );
 };
@@ -349,11 +362,12 @@ export const DEX = () => {
     return (
         <div>
             <Intro
+            
                 price={price}
                 marketCap={marketCap}
             // ... and other props you need to pass
             />
-            {/* ... rest of your component */}
+
             <div className={styles.chartSwapperContainer}>
                 <div>
                     <h1>Pools</h1>

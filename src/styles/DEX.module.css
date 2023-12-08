@@ -111,7 +111,9 @@
 .logoAddress {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  
 }
 
 .logoSection {
@@ -212,15 +214,18 @@
 }
 
 
-.socialContainer {
+.mainContent {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #66974C;
-  padding: 20px;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.stats {
+  flex-basis: 33%;
+  /* Other styles as needed */
+}
+
+.socialContainer {
+  flex-basis: 66%;
+  /* Other styles as needed */
 }
 
 .row {
@@ -233,7 +238,7 @@
 .logoImage {
   height: 40px; /* Adjust size as needed */
   width: auto;
-  margin: 0 10px;
+  margin: 10px 10px;
 }
 
 /* Responsive adjustments */
