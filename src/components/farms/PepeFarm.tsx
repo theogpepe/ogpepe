@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from "@/styles/Dapp.module.css";
-
+import Image from 'next/image';
 interface PepeFarmProps {
   onClose: () => void;
   // Add function props as needed
@@ -43,7 +43,7 @@ const PepeFarm: React.FC<PepeFarmProps> = ({onClose, stake, withdraw, getReward}
                 <div className={styles.label}>PEPE Earned</div>
                 <div className={styles.value}>
                   <div className={styles.logo}>
-                    <img src="/images/token/pepe.png" alt="WOJAK Token" />
+                    <Image width={50} height={50} src="/images/token/pepe.png" alt="WOJAK Token" />
                   </div>
                   <div className={styles.value}>{0}</div>
                 </div>
@@ -54,7 +54,7 @@ const PepeFarm: React.FC<PepeFarmProps> = ({onClose, stake, withdraw, getReward}
             <div className={styles.label}>PEPE/ETH LP Staked</div>
             <div className={styles.value}>
               <div className={styles.logo}>
-                <img src="/images/token/pepe.png" alt="PEPE Token" />
+                <Image width={50} height={50} src="/images/token/pepe.png" alt="PEPE Token" />
               </div>
               <div className={styles.value}>{0}</div> {/* Replace 0 with dynamic value */}
             </div>
@@ -65,7 +65,7 @@ const PepeFarm: React.FC<PepeFarmProps> = ({onClose, stake, withdraw, getReward}
             <div className={styles.label}>PEPE Balance</div>
             <div className={styles.value}>
               <div className={styles.logo}>
-                <img src="/images/token/pepe.png" alt="PEPE Token" />
+                <Image width={50} height={50} src="/images/token/pepe.png" alt="PEPE Token" />
               </div>
               <div className={styles.value}>{0}</div> {/* Replace 0 with dynamic value */}
             </div>
@@ -76,7 +76,7 @@ const PepeFarm: React.FC<PepeFarmProps> = ({onClose, stake, withdraw, getReward}
             <div className={styles.label}>PEPE/ETH LP Balance</div>
             <div className={styles.value}>
               <div className={styles.logo}>
-                <img src="/images/token/pepe.png" alt="PEPE Token" />
+                <Image width={50} height={50} src="/images/token/pepe.png" alt="PEPE Token" />
               </div>
               <div className={styles.value}>{0}</div> {/* Replace 0 with dynamic value */}
             </div>
@@ -101,7 +101,7 @@ const PepeFarm: React.FC<PepeFarmProps> = ({onClose, stake, withdraw, getReward}
         <div>
           <p>
             Chad rewards grow per block and are updated on each transaction
-            (send) to functions with the "updateStakingRewards" modifier.
+            (send) to functions with the updateStakingRewards modifier.
           </p>
         </div>
         <input className={styles.claim_Amount} placeholder="0.0" />

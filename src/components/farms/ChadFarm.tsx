@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "@/styles/Dapp.module.css";
+import Image from 'next/image';
 
 
 interface ChadFarmProps {
@@ -23,7 +24,7 @@ const ChadFarm: React.FC<ChadFarmProps> = ({ onClose, chadBalance }) => {
                 <div className={styles.label}>Your CHAD Balance</div>
                 <div className={styles.value}>
                   <div className={styles.logo}>
-                    <img src="/images/token/chad.png" alt="WOJAK Token" />
+                    <Image width={50} height={50} src="/images/token/chad.png" alt="WOJAK Token" />
                   </div>
                   <div className={styles.value}>{chadBalance.toFixed(5)}</div>
                 </div>

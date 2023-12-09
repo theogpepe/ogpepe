@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import styles from "@/styles/Dapp.module.css";
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const uniswapAddLpUrl = "https://app.uniswap.org/#/add/v2/ETH/0x4dfae3690b93c47470b03036a17b23c1be05127c";
@@ -38,7 +39,7 @@ const FarmHeader: FC<FarmHeaderProps> = ({
             <div className={styles.label}>Your WOJAK Balance</div>
             <div className={styles.value}>
               <div className={styles.logo}>
-                <img src="/images/token/wojak.png" alt="WOJAK Token" />
+                <Image width={50} height={50} src="/images/token/wojak.png" alt="WOJAK Token" />
               </div>
               <div className={styles.value}>{wojakBalance.toFixed(5)}</div>
             </div>
@@ -61,7 +62,7 @@ const FarmHeader: FC<FarmHeaderProps> = ({
           <div className={styles.label}>Your PEPE/ETH LP balance:</div>
           <div className={styles.value}>
             <div className={styles.logo}>
-              <img src="/images/token/pepe.png" alt="PEPE Token" />
+              <Image width={50} height={50} src="/images/token/pepe.png" alt="PEPE Token" />
             </div>
             <div className={styles.value}>{pepeEthLpBalance.toFixed(5)}</div>
             <a href={uniswapAddLpUrl} target="_blank" rel="noopener noreferrer" className={styles.addLpLink}>
@@ -87,7 +88,7 @@ const FarmHeader: FC<FarmHeaderProps> = ({
             <div className={styles.label}>Your CHAD Balance</div>
             <div className={styles.value}>
               <div className={styles.logo}>
-                <img src="/images/token/chad.png" alt="CHAD Token" />
+                <Image width={50} height={50} src="/images/token/chad.png" alt="CHAD Token" />
               </div>
               <div className={styles.value}>{chadBalance.toFixed(5)}</div>
             </div>
@@ -98,7 +99,7 @@ const FarmHeader: FC<FarmHeaderProps> = ({
             <div className={styles.label}>Your PEPE Balance</div>
             <div className={styles.value}>
               <div className={styles.logo}>
-                <img src="/images/token/pepe.png" alt="PEPE Token" />
+                <Image width={50} height={50} src="/images/token/pepe.png" alt="PEPE Token" />
               </div>
               <div className={styles.value}>{pepeBalance.toFixed(5)}</div>
             </div>

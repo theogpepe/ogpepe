@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from "@/styles/Dapp.module.css";
 import { ABIPEPE } from '@/contracts/ABIS';
 import { useContractWrite } from 'wagmi'
+import Image from 'next/image';
 
 interface WojakFarmProps {
   wojakBalance: number;
@@ -173,7 +174,7 @@ const WojakFarm: React.FC<WojakFarmProps> = ({
                 <div className={styles.label}>Your WOJAK Balance</div>
                 <div className={styles.value}>
                   <div className={styles.logo}>
-                    <img src="/images/token/wojak.png" alt="WOJAK Token" />
+                    <Image width={50} height={50} src="/images/token/wojak.png" alt="WOJAK Token" />
                   </div>
                   <div className={styles.value}>{wojakBalance.toFixed(5)}</div>
                 </div>
@@ -222,7 +223,7 @@ const WojakFarm: React.FC<WojakFarmProps> = ({
                 <div className={styles.label}>Your WOJAK Allowance</div>
                 <div className={styles.value}>
                   <div className={styles.logo}>
-                    <img src="/images/token/wojak.png" alt="WOJAK Token" />
+                    <Image width={50} height={50} src="/images/token/wojak.png" alt="WOJAK Token" />
                   </div>
                   <div className={styles.value}>
                     {wojakAllowance !== null ? wojakAllowance.toFixed(5) : '0'}
@@ -244,19 +245,19 @@ const WojakFarm: React.FC<WojakFarmProps> = ({
             <div className={styles.stats}>
               <div className={styles.inner + ' ' + styles.balance}>
                 <p>
-                  INFO: Wojaks are wagecucks, so every time you claim, you'll have
+                  INFO: Wojaks are wagecucks, so every time you claim, you will have
                   to pay 25% VAT in ETH. These fees will be collected by real CHADs.
                 </p>
                 <p>
                   Pepe rewards grow per block and are updated on each transaction
-                  (send) to functions with the "updateStakingRewards" modifier.
+                  (send) to functions with the updateStakingRewards modifier.
                 </p>
                 <div className={styles.stats}>
                   <div className={styles.inner + ' ' + styles.balance}>
                     <div className={styles.label}>PEPE Earned</div>
                     <div className={styles.value}>
                       <div className={styles.logo}>
-                        <img src="/images/token/pepe.png" alt="WOJAK Token" />
+                        <Image width={50} height={50} src="/images/token/pepe.png" alt="WOJAK Token" />
                       </div>
                       <div className={styles.value}>{0}</div>
                     </div>

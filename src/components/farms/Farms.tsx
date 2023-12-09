@@ -4,7 +4,7 @@ import styles from "@/styles/Dapp.module.css";
 import FarmModal from './FarmModal'; // Import the FarmModal component
 import FarmHeader from './FarmHeader';
 import { BigNumberish } from 'ethers';
-
+import Image from 'next/image';
 interface FarmsProps {
   isFarmModalVisible: boolean;
   selectedFarm: string;
@@ -100,9 +100,9 @@ const Farms: React.FC<FarmsProps> = ({
         <div className={styles.content}>
           <div className={styles.farm_info}>
             <div className={`${styles.inner} ${styles.special}`}>
-              <img className={styles.shadow_logo} src="/images/token/wojak.png" alt="Wojak Farm" />
+              <Image width={50} height={50} className={styles.shadow_logo} src="/images/token/wojak.png" alt="Wojak Farm" />
               <div className={styles.logo}>
-                <img src="/images/token/wojak.png" alt="Wojak Farm" />
+                <Image width={50} height={50} src="/images/token/wojak.png" alt="Wojak Farm" />
               </div>
               <div className={styles.name}>WOJAK</div>
               <div className={styles.coin_info}>
@@ -127,9 +127,9 @@ const Farms: React.FC<FarmsProps> = ({
 
           <div className={styles.farm_info}>
             <div className={`${styles.inner} ${styles.special}`}>
-              <img className={styles.shadow_logo} src="/images/token/pepe.png" alt="Wojak Farm" />
+              <Image width={50} height={50} className={styles.shadow_logo} src="/images/token/pepe.png" alt="Wojak Farm" />
               <div className={styles.logo}>
-                <img src="/images/token/pepe.png" alt="Wojak Farm" />
+                <Image width={50} height={50} src="/images/token/pepe.png" alt="Wojak Farm" />
               </div>
               <div className={styles.name}>PEPE</div>
               <div className={styles.coin_info}>
@@ -154,9 +154,9 @@ const Farms: React.FC<FarmsProps> = ({
 
           <div className={styles.farm_info}>
             <div className={`${styles.inner} ${styles.special}`}>
-              <img className={styles.shadow_logo} src="/images/token/chad.png" alt="Wojak Farm" />
+              <Image width={50} height={50} className={styles.shadow_logo} src="/images/token/chad.png" alt="Wojak Farm" />
               <div className={styles.logo}>
-                <img src="/images/token/chad.png" alt="Wojak Farm" />
+                <Image width={50} height={50} src="/images/token/chad.png" alt="Wojak Farm" />
               </div>
               <div className={styles.name}>CHAD</div>
               <div className={styles.coin_info}>
