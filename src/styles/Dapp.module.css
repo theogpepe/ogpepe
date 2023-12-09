@@ -1,0 +1,733 @@
+
+.farm {
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow-x: hidden;
+}
+
+.farm .header {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.farm .header .main_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.farm .header .main_menu a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  pointer-events: auto;
+  color: #55bf35;
+}
+
+.farm .header .main_menu a:hover, .farm .header .main_menu a:active, .farm .header .main_menu a:visited {
+  color: #55bf35;
+}
+
+.farm .header .main_menu a .logo img {
+  height: 2.65rem;
+}
+
+.farm .header .main_menu a .name {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+.farm .header .main_menu nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.farm .header .main_menu nav a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: auto;
+  margin-left: 2rem;
+  font-size: 1rem;
+  color: #55bf35;
+  font-weight: 400;
+}
+
+.farm .header .main_menu nav a:hover, .farm .header .main_menu nav a:active, .farm .header .main_menu nav a:visited {
+  color: #55bf35;
+}
+
+.farm .header .main_menu nav a.active {
+  color: #55bf35;
+}
+
+.farm .header .wallet_connect {
+  font-weight: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.farm .header .wallet_connect .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #55bf35;
+  border: 1px solid #55bf35;
+  border-radius: 0.5rem;
+}
+
+.farm .header .wallet_connect .inner .balance {
+  font-family: "Russo One";
+  color: #3e3e3e;
+  margin: 0rem 1rem;
+}
+
+.farm .header .wallet_connect .inner .address {
+  display: none;
+  font-weight: 400;
+  color: #55bf35;
+  padding: 0.3rem 1rem;
+  background-color: #dedede;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.farm .sub_header {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+
+.farm .sub_header .logo img {
+  height: 5rem;
+}
+
+.farm .sub_header .name {
+  position: relative;
+  color: #55bf35;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.farm .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 60rem;
+  margin: 1rem auto 4rem auto;
+  margin-top: 128px;
+  padding: 0 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+}
+
+.farm .content .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.farm .content .stats .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  background-color: #66974C;
+  border: 2px solid #dedede;
+  margin: 0.7rem;
+  padding: 1.5rem 1rem 0rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.farm .content .stats .inner:hover {
+  background-color: #cbcbcb;
+  border: 2px solid #cbcbcb;
+}
+
+.farm .content .stats .inner.balance, .farm .content .stats .inner.balance_2, .farm .content .stats .inner.balance_3, .farm .content .stats .inner.total_supply, .farm .content .stats .inner.total_supply_2, .farm .content .stats .inner.total_supply_3, .farm .content .stats .inner.staked, .farm .content .stats .inner.staked_2, .farm .content .stats .inner.staked_3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.farm .content .stats .inner.balance .label, .farm .content .stats .inner.balance_2 .label, .farm .content .stats .inner.balance_3 .label, .farm .content .stats .inner.total_supply .label, .farm .content .stats .inner.total_supply_2 .label, .farm .content .stats .inner.total_supply_3 .label, .farm .content .stats .inner.staked .label, .farm .content .stats .inner.staked_2 .label, .farm .content .stats .inner.staked_3 .label {
+  font-family: "Chilanka";
+  margin-top: 0.5rem;
+}
+
+.farm .content .stats .inner.balance > .value, .farm .content .stats .inner.balance_2 > .value, .farm .content .stats .inner.balance_3 > .value, .farm .content .stats .inner.total_supply > .value, .farm .content .stats .inner.total_supply_2 > .value, .farm .content .stats .inner.total_supply_3 > .value, .farm .content .stats .inner.staked > .value, .farm .content .stats .inner.staked_2 > .value, .farm .content .stats .inner.staked_3 > .value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-family: "Russo One", Helvetica, Arial, sans-serif;
+  color: #3e3e3e;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.farm .content .stats .inner.balance > .value img, .farm .content .stats .inner.balance_2 > .value img, .farm .content .stats .inner.balance_3 > .value img, .farm .content .stats .inner.total_supply > .value img, .farm .content .stats .inner.total_supply_2 > .value img, .farm .content .stats .inner.total_supply_3 > .value img, .farm .content .stats .inner.staked > .value img, .farm .content .stats .inner.staked_2 > .value img, .farm .content .stats .inner.staked_3 > .value img {
+  position: relative;
+  max-width: 2.5rem;
+  margin-right: 1rem;
+  top: 0.5rem;
+}
+
+.farm .content .earn {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0rem;
+}
+
+.farm .content .earn button {
+  position: relative;
+  z-index: 10;
+  font-family: "Russo One", Helvetica, Arial, sans-serif;
+  outline: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: #55bf35;
+  color: #3e3e3e;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.farm .content .earn button:hover {
+  opacity: 0.8;
+}
+
+.farm .content .farm_info {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 33%;
+          flex: 1 0 33%;
+  overflow: hidden;
+  -webkit-box-flex: inherit;
+      -ms-flex-positive: inherit;
+          flex-grow: inherit;
+}
+
+.farm .content .farm_info .inner {
+  position: relative;
+  overflow: hidden;
+  background-color: #66974C;
+  border: 2px solid #dedede;
+  margin: 0.7rem;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.farm .content .farm_info .inner:hover {
+  background-color: #3e8e41;
+  border: 2px solid #cbcbcb;
+}
+
+.farm .content .farm_info .inner .shadow_logo {
+  position: absolute;
+  width: 90%;
+  opacity: 0.07;
+  top: -15%;
+  right: -15%;
+  z-index: 1;
+}
+
+.farm .content .farm_info .inner .logo {
+  text-align: center;
+}
+
+.farm .content .farm_info .inner .logo img {
+  max-width: 4rem;
+  margin: 0.5 auto;
+  width: 100%;
+}
+
+.farm .content .farm_info .inner > .name {
+  text-align: center;
+  color: #3e3e3e;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.farm .content .farm_info .inner .stake, .farm .content .farm_info .inner .earn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.4rem 0rem;
+}
+
+.farm .content .farm_info .inner .stake .label, .farm .content .farm_info .inner .earn .label {
+  font-family: "Chilanka";
+}
+
+.farm .content .farm_info .inner .stake .name, .farm .content .farm_info .inner .earn .name {
+  font-family: "Russo One", Helvetica, Arial, sans-serif;
+  color: #3e3e3e;
+  font-weight: 400;
+}
+
+.farm .content .farm_info .inner .button button {
+  position: relative;
+  z-index: 10;
+  font-family: "Russo One", Helvetica, Arial, sans-serif;
+  outline: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  width: 100%;
+  background-color: #55bf35;
+  color: #3e3e3e;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.farm .content .farm_info .inner .button button:hover {
+  opacity: 0.8;
+}
+
+.farm .content .farm_info .inner.special {
+  border: 2px solid #55bf35;
+}
+
+.farm .content .selected_farm {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: none;
+  font-family: "Chilanka", Helvetica, Arial, sans-serif;
+}
+
+.farm .content .selected_farm a {
+  color: #55bf35;
+  font-family: "Russo One", Helvetica, Arial, sans-serif;
+  text-decoration: underline;
+}
+
+.farm .content .selected_farm h2, .farm .content .selected_farm h3, .farm .content .selected_farm b {
+  font-family: "Russo One", Helvetica, Arial, sans-serif;
+}
+
+.farm .content .selected_farm a {
+  width: 100%;
+}
+
+.farm .content .selected_farm .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  background-color: #dedede;
+  border: 2px solid #dedede;
+  margin: 0.7rem;
+  padding: 1.5rem 1rem 0rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.farm .content .selected_farm .inner .max_amount, .farm .content .selected_farm .inner .update {
+  width: 100%;
+  display: block;
+  text-align: right;
+  color: #55bf35;
+  text-decoration: underline;
+  font-family: "Russo One";
+  cursor: pointer;
+}
+
+.farm .content .selected_farm .inner .update {
+  position: relative;
+  top: 2rem;
+}
+
+.farm .content .selected_farm .inner:hover {
+  background-color: #cbcbcb;
+  border: 2px solid #cbcbcb;
+}
+
+.farm .content .selected_farm .inner.earned .special, .farm .content .selected_farm .inner.staked {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.farm .content .selected_farm .inner.earned .special.multi, .farm .content .selected_farm .inner.staked.multi {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+.farm .content .selected_farm .inner.earned .special .logo img, .farm .content .selected_farm .inner.staked .logo img {
+  width: 4rem;
+}
+
+.farm .content .selected_farm .inner.earned .special .value, .farm .content .selected_farm .inner.staked .value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  white-space: nowrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-family: "Russo One", Helvetica, Arial, sans-serif;
+  color: #3e3e3e;
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+.farm .content .selected_farm .inner.earned .special .label, .farm .content .selected_farm .inner.staked .label {
+  font-family: "Chilanka";
+  white-space: nowrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.farm .content .selected_farm .inner.earned .special input, .farm .content .selected_farm .inner.staked input {
+  border: none;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin: 1rem 0rem 1rem 0rem;
+  outline: 0;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 400;
+  font-family: "Russo One", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+.farm .content .selected_farm .inner.earned .special .info, .farm .content .selected_farm .inner.staked .info {
+  padding: 1rem;
+  background-color: #ef8484;
+  color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-family: "Russo One", Helvetica, Arial, sans-serif;
+}
+
+.farm .content .selected_farm .inner.earned .special .button, .farm .content .selected_farm .inner.staked .button {
+  margin-top: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.farm .content .selected_farm .inner.earned .special .button button, .farm .content .selected_farm .inner.staked .button button {
+  position: relative;
+  z-index: 10;
+  font-family: "Russo One", Helvetica, Arial, sans-serif;
+  outline: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  width: 100%;
+  background-color: #55bf35;
+  color: #3e3e3e;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.farm .content .selected_farm .inner.earned .special .button button:hover, .farm .content .selected_farm .inner.staked .button button:hover {
+  opacity: 0.8;
+}
+
+.farm .content .selected_farm .inner.earned .special .button button.button_50, .farm .content .selected_farm .inner.staked .button button.button_50 {
+  margin-right: 0.5rem;
+}
+
+.farm .content .selected_farm .inner.earned .special .button button:last-child, .farm .content .selected_farm .inner.staked .button button:last-child {
+  margin-right: 0rem;
+}
+
+.farm .content:after {
+  content: '';
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+.farm .footer {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.farm .footer a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: auto;
+  white-space: nowrap;
+  font-size: 1rem;
+  color: #55bf35;
+  margin: 0rem 1rem;
+  padding: 0.5rem;
+  font-weight: 400;
+}
+
+.farm .footer a:hover, .farm .footer a:active, .farm .footer a:visited {
+  color: #55bf35;
+}
+
+.farm .footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .farm {
+    height: 100%;
+  }
+  .farm .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1.5rem;
+  }
+  .farm .header .main_menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .farm .header .main_menu a {
+    margin: 0rem 2rem;
+  }
+  .farm .header .main_menu nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1.5rem;
+  }
+  .farm .header .main_menu nav a {
+    margin: 0 1rem;
+  }
+  .farm .header .wallet_connect {
+    margin-top: 1rem;
+  }
+  .farm .sub_header {
+    display: none;
+  }
+  .farm .content {
+    margin-top: 3rem;
+  }
+  .farm .content .farm_info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .farm .content .stats {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .farm .content .stats .inner.balance, .farm .content .stats .inner.balance_2, .farm .content .stats .inner.balance_3, .farm .content .stats .inner.total_supply, .farm .content .stats .inner.total_supply_2, .farm .content .stats .inner.total_supply_3, .farm .content .stats .inner.staked, .farm .content .stats .inner.staked_2, .farm .content .stats .inner.staked_3 {
+    padding: 1rem 2rem;
+  }
+  .farm .content .stats .inner.balance .label, .farm .content .stats .inner.balance_2 .label, .farm .content .stats .inner.balance_3 .label, .farm .content .stats .inner.total_supply .label, .farm .content .stats .inner.total_supply_2 .label, .farm .content .stats .inner.total_supply_3 .label, .farm .content .stats .inner.staked .label, .farm .content .stats .inner.staked_2 .label, .farm .content .stats .inner.staked_3 .label {
+    font-family: "Chilanka";
+    margin-top: 0.5rem;
+  }
+  .farm .content .stats .inner.balance > .value, .farm .content .stats .inner.balance_2 > .value, .farm .content .stats .inner.balance_3 > .value, .farm .content .stats .inner.total_supply > .value, .farm .content .stats .inner.total_supply_2 > .value, .farm .content .stats .inner.total_supply_3 > .value, .farm .content .stats .inner.staked > .value, .farm .content .stats .inner.staked_2 > .value, .farm .content .stats .inner.staked_3 > .value {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  .farm .content .stats .inner.balance > .value img, .farm .content .stats .inner.balance_2 > .value img, .farm .content .stats .inner.balance_3 > .value img, .farm .content .stats .inner.total_supply > .value img, .farm .content .stats .inner.total_supply_2 > .value img, .farm .content .stats .inner.total_supply_3 > .value img, .farm .content .stats .inner.staked > .value img, .farm .content .stats .inner.staked_2 > .value img, .farm .content .stats .inner.staked_3 > .value img {
+    position: relative;
+    max-width: 2rem;
+    margin-right: 1rem;
+    top: 0.5rem;
+  }
+  .farm .content .selected_farm {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .farm .content .farm_info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+  .farm .content .stats {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
+  .farm .content .stats .value {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=farm.css.map */

@@ -234,4 +234,18 @@ span.button:hover {
 	font-weight: bold; /* Making subtitle bold */
   }
 
+  .menuLink a {
+	color: black;
+	background-color: #66974C; /* Green background */
+	padding: 10px 15px;
+	border-radius: 8px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+	margin-top: 10px;
+	margin: 10px;
   
+  }
+  
+  .menuLink a:hover {
+	background-color: #3e8e41; /* Darker green on hover */
+  }

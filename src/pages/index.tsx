@@ -4,10 +4,10 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import { useAccount, useConnect, useContractRead } from 'wagmi';
 import Link from 'next/link';
-import { ABIWojak } from '../contracts/ABIS';
+import { ABIWOJAK } from '../contracts/ABIS';
 import { formatUnits, BigNumberish } from "ethers";
 import DEX from "@/components/DEX";
-
+import Dapp from './dapp';
 
 export default function Home() {
 
@@ -22,7 +22,7 @@ export default function Home() {
 	// Fetch user balance
 	const userBalanceResult = useContractRead({
 		address: "0x4dFae3690b93c47470b03036A17B23C1Be05127C",
-		abi: ABIWojak,
+		abi: ABIWOJAK,
 		functionName: 'balanceOf',
 		args: [address],
 	});
@@ -37,7 +37,7 @@ export default function Home() {
 	// TokenSupplyComponent - Fetch and set total supply
 	const totalSupplyResult = useContractRead({
 		address: "0x4dFae3690b93c47470b03036A17B23C1Be05127C",
-		abi: ABIWojak,
+		abi: ABIWOJAK,
 		functionName: 'totalSupply',
 	});
 
@@ -51,7 +51,7 @@ export default function Home() {
 	// TokenBurnedComponent - Fetch and set burned tokens
 	const burnedResult = useContractRead({
 		address: "0x4dFae3690b93c47470b03036A17B23C1Be05127C",
-		abi: ABIWojak,
+		abi: ABIWOJAK,
 		functionName: 'balanceOf',
 		args: ["0x000000000000000000000000000000000000dEaD"],
 	});
@@ -71,7 +71,7 @@ export default function Home() {
 	function TokenBalanceComponent() {
 		const { data, isError, isLoading } = useContractRead({
 			address: "0x4dFae3690b93c47470b03036A17B23C1Be05127C", // Your contract's address
-			abi: ABIWojak, // Your contract's ABI
+			abi: ABIWOJAK, // Your contract's ABI
 			functionName: 'balanceOf', // Replace with your contract's relevant function
 			args: [address], // Arguments for the function call
 		});
@@ -90,7 +90,21 @@ export default function Home() {
 		);
 	}
 
-
+	const DappButton = () => {
+			const linkStyle = {
+			  color: '#0070f3', // Example color
+			  textDecoration: 'none',
+			  fontWeight: 'bold',
+			  // Add more styling as needed
+			};
+		  
+			return (
+			  <Link href="/dapp">
+				<div style={linkStyle}>Dapp</div>
+			  </Link>
+			);
+		  };
+		  
 
 	return (
 		<>
@@ -120,6 +134,13 @@ export default function Home() {
 							<p className={styles.logoSubtitle}>The Original PEPE</p>
 						</div>
 					</div>
+          {/* Navigation Menu */}
+          <nav className={styles.menuLink}>
+            <Link href="/" className={styles.navLink}>Home</Link>
+            <Link href="/info" className={styles.navLink}>About</Link>
+            <Link href="/dapp" className={styles.navLink}>Dapp</Link>
+            {/* Add more links as needed */}
+          </nav>
 					<div className={styles.buttons}>
 						<w3m-network-button />
 						<w3m-button />
@@ -127,6 +148,7 @@ export default function Home() {
 				</div>
 			</header>
 			<DEX />
+			<DappButton />
 		</>
 	);
 }
