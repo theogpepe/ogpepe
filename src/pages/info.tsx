@@ -2,6 +2,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Info: NextPage = () => {
     return (
@@ -11,7 +12,12 @@ const Info: NextPage = () => {
             </Head>
             <main>
                 <h1>Information Page</h1>
-                <p>This is the info page for PEPE</p>
+                <Image
+							src="/sequence_pepe.svg"
+							alt="PEPE Logo"
+							height="800"  // Increased size for more prominence
+							width="800"
+						/>
                 <Link href="/">
                     Go back to home
                 </Link>
