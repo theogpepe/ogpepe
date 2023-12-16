@@ -303,7 +303,7 @@ const SocialLinks = () => {
     return (
         <div className={styles.socialContainer}>
             <div className={styles.row}>
-                <a href="https://twitter.com/ogpeperc20" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/theogpepe2020" target="_blank" rel="noopener noreferrer">
                     <Image width={50} height={50} src="/socials/x-logo.png" alt="Twitter" className={styles.logoImage} />
                 </a>
                 <a href="https://t.me/OgPeperc20" target="_blank" rel="noopener noreferrer">
