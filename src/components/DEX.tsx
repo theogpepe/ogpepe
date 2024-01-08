@@ -370,7 +370,6 @@ export const DEX = () => {
                 </div>
                 <DextChartV2 />
                 <DextChartV3 />
-                <UniSwapper />
             </div>
         </div>
     );
