@@ -38,7 +38,7 @@ const Info: NextPage = () => {
                     <nav className={styles.menuLink}>
                         <Link href="/" className={styles.navLink}>Home</Link>
                         <Link href="/info" className={styles.navLink}>About</Link>
-                        <Link href="/dapp" className={styles.navLink}>Dapp</Link>
+                        <Link href="https://swap.ogpepe.io" className={styles.navLink}>Swap</Link>
                         {/* Add more links as needed */}
                     </nav>
                     <div className={styles.buttons}>
