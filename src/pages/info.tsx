@@ -1,11 +1,83 @@
-// pages/Dapp.tsx
+// src/pages/info.tsx
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from "@/styles/Home.module.css";
+import FAQ from '@/components/FAQ';
 
 const Info: NextPage = () => {
+
+    // Define the FaqType type
+    type FaqType = {
+        question: string;
+        answer: string;
+    };
+
+    // ... (rest of your component code)
+
+    // Define your FAQs here or import them from another file
+    const faqs: FaqType[] = [
+        {
+            "question": "How do PEPE and WOJAK tokens interact in the Pepe DEX ecosystem?",
+            "answer": "In Pepe DEX, WOJAK tokens, with their limited supply of 11,000, are staked in the Pepe Contract. Users stake WOJAK to earn PEPE tokens as rewards. The Pepe Contract handles these transactions and, under certain rules, mints new PEPE tokens for stakers, leveraging the scarcity of WOJAK to add value to the PEPE rewards."
+        },
+        {
+            "question": "What is the function of the Pepe smart contract in the ecosystem?",
+            "answer": "The Pepe smart contract manages the staking of WOJAK tokens and distribution of PEPE rewards. Users stake WOJAK by interacting with the contract, which then may mint PEPE tokens based on set conditions. The process is automated and transparent, providing a decentralized system for token transactions."
+        },
+        {
+            "question": "Can you describe the staking management and reward mechanism in the Pepe ecosystem?",
+            "answer": "Staking and rewards in the Pepe ecosystem are controlled by the smart contract. Users stake WOJAK with the 'stake' function and withdraw with 'withdraw'. Rewards are claimed through 'getReward', with the contract calculating and minting PEPE tokens. A fee in ETH is taken from the rewards for ecosystem development, and the rest is awarded to the user."
+        },
+
+        {
+            "question": "How does the Pepe DEX maintain a healthy mint-burn balance in its ecosystem?",
+            "answer": "The Pepe DEX employs a strategic mint-burn mechanism to maintain token value and ecosystem stability. Minting occurs primarily through rewards for liquidity providers and staking participants. To counteract inflationary pressures, we implement token burning mechanisms, such as burning a portion of transaction fees or implementing buy-back-and-burn strategies. This balance is crucial for sustaining long-term token value and ecosystem health."
+        },
+        {
+            "question": "Are new PEPE tokens currently being minted for staking rewards?",
+            "answer": "No, minting new PEPE tokens for staking rewards is currently halted. The community voted to set the difficulty high, which results in zero rewards being distributed at this time."
+        },
+        {
+            "question": "How does the tax work when claiming rewards on Pepe DEX?",
+            "answer": "When claiming rewards, a tax is applied as a percentage of the reward's value, payable in ETH. This tax is used to fund community initiatives and promote the Pepe ecosystem."
+        },
+        {
+            "question": "Can you explain how the 'difficulty' setting impacts rewards in the Pepe DEX?",
+            "answer": "In the Pepe DEX, the 'difficulty' setting is a crucial factor in determining how many rewards users get for staking their tokens. Think of 'difficulty' as a hurdle or challenge level in a game. When the difficulty is set high, it's like the game becomes harder, and as a result, the rewards you can earn for the same effort are less. This reduced reward rate helps to prevent too many new PEPE tokens from being created (or minted), which could lead to inflation. Inflation in this context means there are too many tokens available, which can reduce their value. So, by adjusting the difficulty, we can control how many new tokens are given out as rewards, helping to maintain the value of both WOJAK and PEPE tokens. It's a balancing act to ensure that staking remains rewarding but doesn't devalue the tokens you earn."
+        },
+        {
+            "question": "What strategies are being implemented for liquidity and MEME tokens on the DEX?",
+            "answer": "To build liquidity, the DEX is focusing on partnerships, such as with wojak.farm, to reward users who add liquidity to PEPE-related pairs. This strategy aims to unite Pepe communities and promote MEME tokens, increasing visibility and trading efficiency. By providing incentives for liquidity providers, we're enhancing the overall ecosystem and user experience."
+        },
+        {
+            "question": "Can I launch my MEME token on the DEX, and what resources are available for learning about DeFi and DEX?",
+            "answer": "Yes, the DEX encourages users to create and list their own MEME tokens, subject to certain criteria and community review. Additionally, the platform offers comprehensive guides and tutorials to educate new users about DeFi and the DEX, ensuring a supportive environment for both token creators and traders."
+        },
+        {
+            "question": "How does OG PEPE DEX distinguish itself, and how can users contribute to its development?",
+            "answer": "OG PEPE DEX sets itself apart with its 1% fee and focus on community-driven development and MEME token specialization. We value community input for new features or partnerships, which can be suggested through governance processes or community forums. This collaborative approach is key to our continuous evolution and success."
+        },
+
+        {
+            "question": "What is the strategy for integrating Pepe communities into the Pepe DEX ecosystem?",
+            "answer": "Our strategy involves engaging with communities associated with other Pepe tokens, aiming to bring them under the broader Pepe DEX umbrella. By targeting these specific groups, we plan to increase visibility and adoption within the Pepe ecosystem. Incentive programs, collaborations, and community-driven initiatives are key to this approach, helping to unify various Pepe communities and fostering a more robust and interconnected ecosystem."
+        },
+        {
+            "question": "How does the DEX ensure ecosystem sustainability while promoting MEME tokens?",
+            "answer": "Sustainability in the DEX is achieved through a careful balance of promoting MEME tokens and ensuring responsible ecosystem management. We focus on supporting MEME tokens with strong community backing and potential for growth, while implementing mechanisms to maintain liquidity and token value. This includes liquidity incentives, community engagement programs, and regular evaluations of token performance to ensure alignment with our long-term ecosystem goals."
+        },
+        {
+            "question": "What are the long-term plans for the OG PEPE token within the DEX?",
+            "answer": "Long-term plans for the OG PEPE token revolve around enhancing its utility and value within the DEX. This includes integrating OG PEPE into governance processes, using it as a key token for exclusive features or services, and developing partnerships that extend its use cases. By continuously evolving its utility, we aim to solidify OG PEPE's position as a cornerstone of our ecosystem, benefiting token holders and contributing to the overall health of the platform."
+        }
+
+
+    ]
+
+        ;
+
     return (
         <>
             <Head>
@@ -38,7 +110,8 @@ const Info: NextPage = () => {
                     <nav className={styles.menuLink}>
                         <Link href="/" className={styles.navLink}>Home</Link>
                         <Link href="/info" className={styles.navLink}>About</Link>
-                        <Link href="https://swap.ogpepe.io" className={styles.navLink}>Swap</Link>
+                        <Link href="/pepe" className={styles.navLink}>PEPE</Link>
+                        <Link href="https://swap.ogpepe.io" className={styles.navLink}>DEX</Link>
                         {/* Add more links as needed */}
                     </nav>
                     <div className={styles.buttons}>
@@ -48,105 +121,14 @@ const Info: NextPage = () => {
                 </div>
             </header>
 
-            <main>
-                <h1>Information Page</h1>
-                <Image
-                    src="/sequence_pepe.svg"
-                    alt="Sequence Diagram"
-                    height="800"
-                    width="800"
-                />
-                                <div className="info-text">
-
-                <p>
-                    The sequence diagram you have seen illustrates the interactions within the Pepe contract, 
-                    specifically focusing on how users stake Wojak tokens to earn Pepe tokens. Here a 
-                    step-by-step explanation of the process:
-                </p>
-                <h2>Staking Wojak Tokens:</h2>
-                <p>
-                    The user initiates the staking process by calling the <code>stake</code> function in the Pepe contract, 
-                    specifying the amount of Wojak tokens they wish to stake. The Pepe contract then interacts with the 
-                    Wojak IERC20 token contract, requesting to transfer the specified amount of Wojak tokens from the 
-                    user account to the Pepe contract. This is done using the <code>transferFrom</code> method. Once 
-                    the transfer is confirmed, the Pepe contract logs this event with a <code>Staked</code> event, 
-                    indicating the user address, the amount staked, and the total Wojak staked in the contract.
-                </p>
-                <h2>Withdrawing Wojak Tokens:</h2>
-                <p>
-                    If the user decides to withdraw their staked Wojak tokens, they call the <code>withdraw</code> 
-                    function in the Pepe contract. The Pepe contract then requests the Wojak token contract to transfer 
-                    the specified amount of Wojak tokens back to the user account. Upon successful transfer, the Pepe 
-                    contract emits a <code>Withdrawn</code> event, detailing the user address and the amount withdrawn.
-                </p>
-                <h2>Claiming Pepe Rewards:</h2>
-                <p>
-                    To claim Pepe rewards, the user calls the <code>getReward</code> function, specifying the amount of 
-                    Pepe they wish to claim. The Pepe contract consults with the PEPE_ETH_Oracle to determine the value 
-                    of the reward. A tax is calculated and transferred to a designated address (Chad address in this 
-                    case). The Pepe contract then directly mints the Pepe tokens to the users account, effectively 
-                    rewarding the user. This minting process is an internal action within the Pepe contract. Finally, a 
-                    <code>Rewarded</code> event is emitted, indicating the users address, the amount of Pepe claimed, 
-                    its value, and the tax applied. Throughout this process, the Pepe contract handles the staking, 
-                    withdrawal, and reward mechanisms, interacting with the Wojak token contract for token transfers and 
-                    the oracle for value determination. The use of events (<code>Staked</code>, <code>Withdrawn</code>, 
-                    <code>Rewarded</code>) provides transparency and traceability for these actions on the blockchain.
-                </p>
-                <h2>Understanding Difficulty and Reward Calculation</h2>
-            <p>
-                In the Pepe contract, the <code>difficulty</code> variable significantly influences 
-                the rewards for staking Wojak tokens. Here is how it impacts the reward calculation:
-            </p>
-            <p>
-                The <code>difficulty</code> variable is used as a divisor in the formula that calculates 
-                the rewards for staking Wojak tokens. Typically, this formula would take into account 
-                the number of tokens staked, the number of blocks since the last reward calculation, 
-                and the difficulty value.
-            </p>
-            <p>
-                The basic idea is that the reward for each block is proportional to the amount of Wojak 
-                staked and inversely proportional to the difficulty. This means that as the difficulty 
-                increases, the reward per block decreases, and vice versa.
-            </p>
-            <h3>Calculation Example:</h3>
-            <p>
-                Suppose the reward formula is something like this: 
-                <code>reward = (stakedAmount * rewardBlocks) / difficulty</code>.
-                Here, <code>stakedAmount</code> is the amount of Wojak tokens the user has staked, 
-                <code>rewardBlocks</code> is the number of blocks since the last reward calculation, 
-                and <code>difficulty</code> is the difficulty value set in the contract.
-            </p>
-            <p>
-                If the difficulty is high, the division result becomes smaller, meaning the user gets 
-                fewer rewards for each block. Conversely, if the difficulty is low, the division result 
-                is larger, and the user gets more rewards.
-            </p>
-            <h3>Impact of Changing Difficulty:</h3>
-            <ul>
-                <li>
-                    <strong>Increasing Difficulty:</strong> If the contract owner increases the difficulty, 
-                    the rewards per block for each user will decrease. This might be done to control the 
-                    rate at which new tokens are minted or distributed, possibly in response to economic 
-                    factors like token inflation or changes in the token value.
-                </li>
-                <li>
-                    <strong>Decreasing Difficulty:</strong> Conversely, decreasing the difficulty will 
-                    increase the rewards per block. This could be used as an incentive mechanism to 
-                    encourage more users to stake their tokens, increasing participation in the platform.
-                </li>
-            </ul>
-            <p>
-                The difficulty setting is a tool for the contract administrators to balance the token 
-                economy. It needs to be managed carefully to maintain a fair and sustainable reward system. 
-                Setting the difficulty too low could lead to rapid inflation of the token, while setting it 
-                too high might disincentivize staking due to meager rewards.
-            </p>
-                </div>
+            <main style={{ marginTop: '128px' }}>
+                <FAQ faqs={faqs} />
 
                 <Link href="/">
                     Go back to home
                 </Link>
             </main>
+
             <style jsx>{`
                 .info-text {
                     background-color: #000; // Dark background

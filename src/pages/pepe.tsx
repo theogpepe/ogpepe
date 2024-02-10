@@ -8,7 +8,6 @@ import { ABIWOJAK } from '../contracts/ABIS';
 import { formatUnits, BigNumberish } from "ethers";
 import DEX from "@/components/DEX";
 import Dapp from './dapp';
-import Intro from '@/components/Intro';
 
 export default function Home() {
 
@@ -92,33 +91,18 @@ export default function Home() {
 	}
 
 	const DappButton = () => {
-		const [isHovered, setIsHovered] = useState(false);
-	  
-		const buttonStyle = {
-		  color: 'black',
-		  backgroundColor: isHovered ? '#3e8e41' : '#66974C', // Green background, darker on hover
-		  padding: '10px 15px',
-		  borderRadius: '8px',
-		  textDecoration: 'none',
-		  transition: 'background-color 0.3s ease',
-		  margin: '10px',
-		  display: 'inline-block', // To maintain button shape
-		  cursor: 'pointer', // Change cursor on hover
-		};
-	  
-		return (
-		  <div style={{ textAlign: 'center' }}> {/* Center the button container */}
-			<a href="https://swap.ogpepe.io" target="_blank" rel="noopener noreferrer" 
-			   style={buttonStyle}
-			   onMouseEnter={() => setIsHovered(true)}
-			   onMouseLeave={() => setIsHovered(false)}>
-			  Launch APP
-			</a>
-		  </div>
-		);
-	  };
-	  
-
+			const linkStyle = {
+			  color: '#0070f3', // Example color
+			  textDecoration: 'none',
+			  fontWeight: 'bold',
+			  // Add more styling as needed
+			};
+		  
+			return (
+				<Link href="https://swap.ogpepe.io"><div style={linkStyle}>Swap</div></Link>
+			);
+		  };
+		  
 
 	return (
 		<>
@@ -148,21 +132,21 @@ export default function Home() {
 							<p className={styles.logoSubtitle}>The Original PEPE</p>
 						</div>
 					</div>
-					{/* Navigation Menu */}
-					<nav className={styles.menuLink}>
-						<Link href="/" className={styles.navLink}>Home</Link>
-						<Link href="/info" className={styles.navLink}>About</Link>
-						<Link href="/pepe" className={styles.navLink}>PEPE</Link>
-						<Link href="https://swap.ogpepe.io" className={styles.navLink}>DEX</Link>
-						{/* Add more links as needed */}
-					</nav>
+          {/* Navigation Menu */}
+          <nav className={styles.menuLink}>
+            <Link href="/" className={styles.navLink}>Home</Link>
+            <Link href="/info" className={styles.navLink}>About</Link>
+            <Link href="/pepe" className={styles.navLink}>PEPE</Link>
+            <Link href="https://swap.ogpepe.io" className={styles.navLink}>DEX</Link>
+            {/* Add more links as needed */}
+          </nav>
 					<div className={styles.buttons}>
 						<w3m-network-button />
 						<w3m-button />
 					</div>
 				</div>
 			</header>
-			<Intro />
+			<DEX />
 			<DappButton />
 		</>
 	);
