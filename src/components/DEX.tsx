@@ -62,15 +62,6 @@ const Intro: React.FC<IntroProps> = ({ price, marketCap }) => {
                         />
                     </div>
                     <h1 className={styles.title}>The Original Pepe </h1>
-                    <div className={styles.logoSection}>
-
-                    <Image
-                            src="/pepe.png"
-                            alt="The Original Pepe Logo"
-                            width={128}
-                            height={128}
-                        />
-                </div>
                 </div>
             </div>
             {/* Main Content with Stats and Social Links */}
