@@ -6,8 +6,6 @@ import { useAccount, useConnect, useContractRead } from 'wagmi';
 import Link from 'next/link';
 import { ABIWOJAK } from '../contracts/ABIS';
 import { formatUnits, BigNumberish } from "ethers";
-import DEX from "@/components/DEX";
-import Dapp from './dapp';
 import Intro from '@/components/Intro';
 
 export default function Home() {
@@ -153,6 +151,7 @@ export default function Home() {
 						<Link href="/" className={styles.navLink}>Home</Link>
 						<Link href="/info" className={styles.navLink}>About</Link>
 						<Link href="/pepe" className={styles.navLink}>PEPE</Link>
+						<Link href="/chad" className={styles.navLink}>CHAD</Link>
 						<Link href="https://swap.ogpepe.io" className={styles.navLink}>DEX</Link>
 						{/* Add more links as needed */}
 					</nav>

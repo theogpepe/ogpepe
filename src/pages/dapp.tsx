@@ -42,6 +42,7 @@ return (
         <Link href="/" className={styles.navLink}>Home</Link>
         <Link href="/info" className={styles.navLink}>About</Link>
         <Link href="/pepe" className={styles.navLink}>PEPE</Link>
+        <Link href="/chad" className={styles.navLink}>CHAD</Link>
         <Link href="https://swap.ogpepe.io" className={styles.navLink}>DEX</Link>
         {/* Add more links as needed */}
       </nav>
