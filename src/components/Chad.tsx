@@ -190,18 +190,19 @@ export const Chad = () => {
             <div style={{ maxWidth: '800px', margin: 'auto', textAlign: 'center' }}>
                 <h1>Uniswap Chad Pools</h1>
                 <div style={{ marginTop: '128px', backgroundColor: '#000', borderRadius: '12px', }}>
-    <h2>🌐 Chad's Bold Mission: Powering the Chad Ecosystem 🚀</h2>
-    <p><strong>Chad's Roots:</strong> Originally, Chad was the guardian against PEPE inflation, incentivizing the ETH/PEPE liquidity pool. His role was crucial in maintaining balance in the WOJAK-PEPE-CHAD ecosystem.</p>
-    <p><strong>Change in the Crypto Landscape:</strong> With PEPE ceasing to mint, Chad’s initial role lost its purpose. This pivotal change marked a new chapter for Chad.</p>
-    <p><strong>Redefining Chad:</strong> Seizing the moment, Chad also paused minting by increasing difficulty to mint to the max, making rewards 0, and rennouncing ownership, marking his transition to a fixed-supply token. This was more than an economic shift; it was the start of Chad's journey towards independence and self-identity.</p>
-    <p><strong>The Mission:</strong> Chad's journey has evolved into a grand mission, one that transcends its initial role. The aim is audacious yet clear – to transform Chad into an influential force that acts as an index for other Chad tokens, guiding them towards collective success.</p>
-    <p><strong>Uniting the Chads:</strong> By integrating Chad into liquidity pools with at least four other Chad tokens, we're not just creating trading opportunities – we're building an interconnected network. Each LP pool becomes a link in a larger chain, binding the Chad tokens in a shared destiny.</p>
-    <p><strong>Acting as an Index:</strong> In this new role, Chad becomes more than just a token; it's a benchmark, a measure of the health and vibrancy of the entire Chad ecosystem. As Chad goes, so do the others – its performance reflects and influences the collective.</p>
-    <p><strong>Strength in Unity:</strong> This strategy is a game-changer. When Chad pairs with other Chads in these LP pools, it enhances the liquidity and stability of the entire network. It's a mutual uplift, where the rise of one Chad contributes to the ascent of all.</p>
-    <p><strong>Fueling the Ecosystem:</strong> Chad’s presence across multiple pools ensures a diverse and robust ecosystem. It becomes a pivotal piece in the puzzle, connecting different tokens and their communities. This network effect can amplify growth, attract more participation, and increase visibility across the board.</p>
-    <p><strong>A Beacon for All Chads:</strong> Chad’s journey is now emblematic of innovation and unity in the crypto world. Its mission goes beyond mere transactions; it's about forging a path where every Chad token can thrive and prosper, supported by a foundation of shared success and collaborative growth.</p>
-    <p><strong>Chad's Mission:</strong> Chad's mission is to be the cornerstone of a thriving ecosystem, where its influence and integration across multiple liquidity pools uplift the entire network of Chad tokens.</p>
+    <h2>🌐 Chad&apos;s Bold Mission: Powering the Chad Ecosystem 🚀</h2>
+    <p><strong>Chad&apos;s Roots:</strong> Originally, Chad was the guardian against PEPE inflation, incentivizing the ETH/PEPE liquidity pool. His role was crucial in maintaining balance in the WOJAK-PEPE-CHAD ecosystem.</p>
+    <p><strong>Change in the Crypto Landscape:</strong> With PEPE ceasing to mint, Chad&apos;s initial role lost its purpose. This pivotal change marked a new chapter for Chad.</p>
+    <p><strong>Redefining Chad:</strong> Seizing the moment, Chad also paused minting, marking his transition to a fixed-supply token. This was more than an economic shift; it was the start of Chad&apos;s journey towards independence and self-identity.</p>
+    <p><strong>The Mission:</strong> Chad&apos;s journey has evolved into a grand mission, one that transcends its initial role. The aim is audacious yet clear – to transform Chad into an influential force that acts as an index for other Chad tokens, guiding them towards collective success.</p>
+    <p><strong>Uniting the Chads:</strong> By integrating Chad into liquidity pools with at least four other Chad tokens, we&apos;re not just creating trading opportunities – we&apos;re building an interconnected network. Each LP pool becomes a link in a larger chain, binding the Chad tokens in a shared destiny.</p>
+    <p><strong>Acting as an Index:</strong> In this new role, Chad becomes more than just a token; it&apos;s a benchmark, a measure of the health and vibrancy of the entire Chad ecosystem. As Chad goes, so do the others – its performance reflects and influences the collective.</p>
+    <p><strong>Strength in Unity:</strong> This strategy is a game-changer. When Chad pairs with other Chads in these LP pools, it enhances the liquidity and stability of the entire network. It&apos;s a mutual uplift, where the rise of one Chad contributes to the ascent of all.</p>
+    <p><strong>Fueling the Ecosystem:</strong> Chad&apos;s presence across multiple pools ensures a diverse and robust ecosystem. It becomes a pivotal piece in the puzzle, connecting different tokens and their communities. This network effect can amplify growth, attract more participation, and increase visibility across the board.</p>
+    <p><strong>A Beacon for All Chads:</strong> Chad&apos;s journey is now emblematic of innovation and unity in the crypto world. Its mission goes beyond mere transactions; it&apos;s about forging a path where every Chad token can thrive and prosper, supported by a foundation of shared success and collaborative growth.</p>
+    <p><strong>Chad&apos;s Mission:</strong> Chad&apos;s mission is to be the cornerstone of a thriving ecosystem, where its influence and integration across multiple liquidity pools uplift the entire network of Chad tokens.</p>
 </div>
+
 <br></br>
 <div className={styles.addressSection}>
                     <a href="https://etherscan.io/token/0x5c888fa2e6f9f0880321683d1efa12e936fd5051"
