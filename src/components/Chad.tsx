@@ -103,7 +103,7 @@ const PoolInfo: React.FC<{ pools: Pool[] }> = ({ pools }) => {
                 <thead>
                     <tr>
                         <th>Pool Name</th>
-                        <th>PEPE Price</th>
+                        <th>Price</th>
                         <th>24h Vol</th>
                         <th>Liquidity</th>
                         <th>FDV</th>
@@ -403,10 +403,14 @@ export const Chad = () => {
                         0x5c888fa2e6f9f0880321683d1efa12e936fd5051
                     </a>
                 </div>
+                <br></br>
+                <h1>Top Chads On Ethereum</h1>
+                <br></br>
+
                 <PoolInfo pools={poolsData} />
             </div>
             <div className={styles.wrapper}>
-                <h1>Token Pairs Balances</h1>
+                <h1>OG Chad Index Pairs Stats</h1>
                 <table className={styles.poolTable}>
                     <thead>
                         <tr>
@@ -419,31 +423,35 @@ export const Chad = () => {
                     </thead>
                     <tbody>
                         {/* Pair 1: CHAD/WETH */}
+                        <tr><td colSpan={6}><hr /></td></tr> {/* Row with horizontal line */}
+
                         <tr>
                             <td>Pair 1: CHAD/WETH</td>
-                            <td>CHAD</td>
+                            <td><Image width={32} height={32} src={"/images/token/chad.png"} alt="Logo 1" style={{ width: '32px' }} />CHAD</td>
                             <td>{pair1Balances.chad}</td>
                             <td>{((pair1Balances.chad / totalSupplyChad) * 100).toFixed(2)}%</td>
                             <td>${(pair1Balances.chad * chadValue).toFixed(2)}</td>
                         </tr>
                         <tr>
                             <td>Pair 1: CHAD/WETH</td>
-                            <td>WETH</td>
+                            <td><Image width={32} height={32} src={"/images/token/weth.png"} alt="Logo 1" style={{ width: '32px' }} />WETH</td>
                             <td>{pair1Balances.weth}</td>
                             <td>{((pair1Balances.weth / totalSupplyWeth) * 100).toFixed(2)}%</td>
                             <td>${(pair1Balances.weth * wethValue).toFixed(2)}</td>
                         </tr>
+                        <tr><td colSpan={6}><hr /></td></tr> {/* Row with horizontal line */}
+
                         {/* Pair 2: CHAD/CHADRED */}
                         <tr>
                             <td>Pair 2: CHAD/CHADRED</td>
-                            <td>CHAD</td>
+                            <td><Image width={32} height={32} src={"/images/token/chad.png"} alt="Logo 1" style={{ width: '32px' }} />CHAD</td>
                             <td>{pair2Balances.chad}</td>
                             <td>{((pair2Balances.chad / totalSupplyChad) * 100).toFixed(2)}%</td>
                             <td>${(pair2Balances.chad * chadValue).toFixed(2)}</td>
                         </tr>
                         <tr>
                             <td>Pair 2: CHAD/CHADRED</td>
-                            <td>CHAD (Red)</td>
+                            <td><Image width={32} height={32} src={"/images/token/chadred.png"} alt="Logo 1" style={{ width: '32px' }} />CHAD (Red)</td>
                             <td>{pair2Balances.chadred}</td>
                             <td>{((pair2Balances.chadred / 33600000000) * 100).toFixed(2)}%</td>
                             <td>${(pair2Balances.chad * chadValue).toFixed(2)}</td>
@@ -451,22 +459,25 @@ export const Chad = () => {
                         </tr>
 
 
+                        <tr><td colSpan={6}><hr /></td></tr> {/* Row with horizontal line */}
 
                         {/* Pair 3: CHAD/CHADTOKEN */}
                         <tr>
                             <td>Pair 3: CHAD/CHADTOKEN</td>
-                            <td>CHAD</td>
+                            <td><Image width={32} height={32} src={"/images/token/chad.png"} alt="Logo 1" style={{ width: '32px' }} />CHAD</td>
                             <td>{pair3Balances.chad}</td>
                             <td>{((pair3Balances.chad / totalSupplyChad) * 100).toFixed(2)}%</td>
                             <td>${(pair3Balances.chad * chadValue).toFixed(2)}</td>
                         </tr>
                         <tr>
                             <td>Pair 3: CHAD/CHADTOKEN</td>
-                            <td>CHAD (Token)</td>
+                            <td><Image width={32} height={32} src={"/images/token/chadtoken.png"} alt="Logo 1" style={{ width: '32px' }} />CHAD (Token)</td>
                             <td>{pair3Balances.chadtoken}</td>
-                            <td>{((pair3Balances.chadtoken / totalSupplyChadToken) * 100).toFixed(8)}%</td>
+                            <td>{((pair3Balances.chadtoken / totalSupplyChadToken) * 100).toFixed(2)}%</td>
                             <td>${(pair3Balances.chad * chadValue).toFixed(2)}</td>
                         </tr>
+                        <tr><td colSpan={6}><hr /></td></tr> {/* Row with horizontal line */}
+
                     </tbody>
                 </table>
             </div>
