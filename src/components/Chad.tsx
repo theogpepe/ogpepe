@@ -5,7 +5,8 @@ import Image from 'next/image';
 import { ABIWOJAK } from '@/contracts/ABIS';
 import { useContractRead } from 'wagmi';
 import { formatUnits } from 'ethers';
-
+import useGetTokenPrice from '@/utils/useGetTokenPrice';
+import TokenPricesDisplay from '@/utils/TokenPricesDisplay';
 
 
 interface Pool {
@@ -147,11 +148,18 @@ export const Chad = () => {
     const [price, setPrice] = useState(0); // State for price
     const [marketCap, setMarketCap] = useState(0); // State for market cap
 
+
     const chadAddress = '0x5C888fA2e6f9f0880321683D1eFA12e936fD5051';
     const chadredAddress = '0x68d009f251ff3a271477f77acb704c3b0f32a0c0';
     const chadtokenAddress = '0xb4577d084f289e696ddfac178c11663e573900f1';
     const chadcoinAddress = '0x6b89b97169a797d94f057f4a0b01e2ca303155e4';
     const wethAddress = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2';
+
+    const chadPriceUsd = useGetTokenPrice(chadAddress);
+    const chadredPriceUsd = useGetTokenPrice(chadredAddress);
+    const chadtokenPriceUsd = useGetTokenPrice(chadtokenAddress);
+    const chadcoinPriceUsd = useGetTokenPrice(chadcoinAddress);
+    const wethPriceUsd = useGetTokenPrice(wethAddress);
 
     // Define total supply and value for each token
     const totalSupplyWeth = 3333333; // Total supply of WETH
@@ -423,61 +431,64 @@ export const Chad = () => {
                     </thead>
                     <tbody>
                         {/* Pair 1: CHAD/WETH */}
-                        <tr><td colSpan={6}><hr /></td></tr> {/* Row with horizontal line */}
-
+                        <tr>
+                            <td colSpan={5}><hr /></td> {/* Row with horizontal line */}
+                        </tr>
                         <tr>
                             <td>Pair 1: CHAD/WETH</td>
-                            <td><Image width={32} height={32} src={"/images/token/chad.png"} alt="Logo 1" style={{ width: '32px' }} />CHAD</td>
+                            <td><Image width={32} height={32} src="/images/token/chad.png" alt="CHAD Logo" style={{ width: '32px' }} />CHAD</td>
                             <td>{pair1Balances.chad}</td>
                             <td>{((pair1Balances.chad / totalSupplyChad) * 100).toFixed(2)}%</td>
-                            <td>${(pair1Balances.chad * chadValue).toFixed(2)}</td>
+                            <td>{chadPriceUsd !== undefined ? `$${(pair1Balances.chad * chadPriceUsd).toFixed(2)}` : 'Loading...'}</td>
                         </tr>
                         <tr>
                             <td>Pair 1: CHAD/WETH</td>
-                            <td><Image width={32} height={32} src={"/images/token/weth.png"} alt="Logo 1" style={{ width: '32px' }} />WETH</td>
+                            <td><Image width={32} height={32} src="/images/token/weth.png" alt="WETH Logo" style={{ width: '32px' }} />WETH</td>
                             <td>{pair1Balances.weth}</td>
                             <td>{((pair1Balances.weth / totalSupplyWeth) * 100).toFixed(2)}%</td>
-                            <td>${(pair1Balances.weth * wethValue).toFixed(2)}</td>
+                            <td>{wethPriceUsd !== undefined ? `$${(pair1Balances.weth * wethPriceUsd).toFixed(2)}` : 'Loading...'}</td>
                         </tr>
-                        <tr><td colSpan={6}><hr /></td></tr> {/* Row with horizontal line */}
+                        <tr>
+                            <td colSpan={5}><hr /></td> {/* Row with horizontal line */}
+                        </tr>
 
                         {/* Pair 2: CHAD/CHADRED */}
                         <tr>
                             <td>Pair 2: CHAD/CHADRED</td>
-                            <td><Image width={32} height={32} src={"/images/token/chad.png"} alt="Logo 1" style={{ width: '32px' }} />CHAD</td>
+                            <td><Image width={32} height={32} src="/images/token/chad.png" alt="CHAD Logo" style={{ width: '32px' }} />CHAD</td>
                             <td>{pair2Balances.chad}</td>
                             <td>{((pair2Balances.chad / totalSupplyChad) * 100).toFixed(2)}%</td>
-                            <td>${(pair2Balances.chad * chadValue).toFixed(2)}</td>
+                            <td>{chadPriceUsd !== undefined ? `$${(pair2Balances.chad * chadPriceUsd).toFixed(2)}` : 'Loading...'}</td>
                         </tr>
                         <tr>
                             <td>Pair 2: CHAD/CHADRED</td>
-                            <td><Image width={32} height={32} src={"/images/token/chadred.png"} alt="Logo 1" style={{ width: '32px' }} />CHAD (Red)</td>
+                            <td><Image width={32} height={32} src="/images/token/chadred.png" alt="CHAD Red Logo" style={{ width: '32px' }} />CHAD (Red)</td>
                             <td>{pair2Balances.chadred}</td>
                             <td>{((pair2Balances.chadred / 33600000000) * 100).toFixed(2)}%</td>
-                            <td>${(pair2Balances.chad * chadValue).toFixed(2)}</td>
-
+                            <td>{chadredPriceUsd !== undefined ? `$${(pair2Balances.chadred * chadredPriceUsd).toFixed(2)}` : 'Loading...'}</td>
                         </tr>
-
-
-                        <tr><td colSpan={6}><hr /></td></tr> {/* Row with horizontal line */}
+                        <tr>
+                            <td colSpan={5}><hr /></td> {/* Row with horizontal line */}
+                        </tr>
 
                         {/* Pair 3: CHAD/CHADTOKEN */}
                         <tr>
                             <td>Pair 3: CHAD/CHADTOKEN</td>
-                            <td><Image width={32} height={32} src={"/images/token/chad.png"} alt="Logo 1" style={{ width: '32px' }} />CHAD</td>
+                            <td><Image width={32} height={32} src="/images/token/chad.png" alt="CHAD Logo" style={{ width: '32px' }} />CHAD</td>
                             <td>{pair3Balances.chad}</td>
                             <td>{((pair3Balances.chad / totalSupplyChad) * 100).toFixed(2)}%</td>
-                            <td>${(pair3Balances.chad * chadValue).toFixed(2)}</td>
+                            <td>{chadPriceUsd !== undefined ? `$${(pair3Balances.chad * chadPriceUsd).toFixed(2)}` : 'Loading...'}</td>
                         </tr>
                         <tr>
                             <td>Pair 3: CHAD/CHADTOKEN</td>
-                            <td><Image width={32} height={32} src={"/images/token/chadtoken.png"} alt="Logo 1" style={{ width: '32px' }} />CHAD (Token)</td>
+                            <td><Image width={32} height={32} src="/images/token/chadtoken.png" alt="CHAD Token Logo" style={{ width: '32px' }} />CHAD (Token)</td>
                             <td>{pair3Balances.chadtoken}</td>
                             <td>{((pair3Balances.chadtoken / totalSupplyChadToken) * 100).toFixed(2)}%</td>
-                            <td>${(pair3Balances.chad * chadValue).toFixed(2)}</td>
+                            <td>{chadtokenPriceUsd !== undefined ? `$${(pair3Balances.chadtoken * chadtokenPriceUsd).toFixed(2)}` : 'Loading...'}</td>
                         </tr>
-                        <tr><td colSpan={6}><hr /></td></tr> {/* Row with horizontal line */}
-
+                        <tr>
+                            <td colSpan={5}><hr /></td> {/* Row with horizontal line */}
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -487,3 +498,5 @@ export const Chad = () => {
 
 };
 export default Chad;
+
+
