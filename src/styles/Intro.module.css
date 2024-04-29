@@ -1,13 +1,24 @@
 .container {
-  background-color: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
+  padding-top:113px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding-bottom: 14px;
 }
 
+.overview{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url('/coins-bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  max-width: 36rem;
+}
 
 .header {
   flex-grow: 1;

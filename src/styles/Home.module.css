@@ -24,6 +24,7 @@
 	right: 0; /* Ensures the header spans the full width */
 	z-index: 111111; /* Ensures the header stays above other content */
 	background-color: var(--color-bg); /* Adjust as needed, maybe same as page background */
+	
 	/* Rest of your styling */
   }
 
@@ -93,14 +94,14 @@
   }
   
   .infoRow span {
-	font-weight: bold;
+	font-weight: normal;
 	color: #555;
 	margin-right: 10px;
   }
   
   .infoRow .value {
 	color: #1a73e8; /* Highlight values */
-	font-weight: bold;
+	font-weight: normal;
   }
   
   .infoRow.balanceRow {
@@ -153,7 +154,7 @@
 
 .main h1 {
 	font-size: 1.75rem;
-	font-weight: 600;
+	font-weight: normal;
 }
 
 span.button {
@@ -222,28 +223,34 @@ span.button:hover {
   
   .logoTitle {
 	font-size: 28px; /* Increased size for the main title */
-	color: #000000; /* Black color for the title */
+	color: #ffffff; /* Black color for the title */
 	margin: 0;
-	font-weight: bold;
+	font-weight:normal;
   }
   
   .logoSubtitle {
 	font-size: 18px; /* Larger size for the subtitle */
-	color: #000000; /* Black color for the subtitle */
+	color: #cbcbcb; /* Black color for the subtitle */
 	margin: 0;
-	font-weight: bold; /* Making subtitle bold */
+	font-weight: normal; /* Making subtitle bold */
+  }
+
+  .menuLink{
+	display: flex;
+	align-items: center;
+	gap: 16px;
   }
 
   .menuLink a {
-	color: black;
-	background-color: #66974C; /* Green background */
+	color: white;
+	/* background-color: #66974C; Green background */
 	padding: 10px 15px;
 	border-radius: 8px;
 	text-decoration: none;
+	font-weight: normal;
 	transition: background-color 0.3s ease;
-	margin-top: 10px;
-	margin: 10px;
-  
+	/* margin-top: 10px; */
+	/* margin: 10px; */
   }
   
   .menuLink a:hover {
