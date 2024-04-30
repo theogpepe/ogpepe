@@ -1,12 +1,22 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Avenir+Next:wght@400;500;600;700&family=Fira+Code:wght@400;700&family=Fira+Mono:wght@400;700&family=Manrope:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Chango';
+    src: local('Chango'), url('./fonts/Chango-Regular.ttf') format('TrueType');
+}
+
 :root {
-	--font-base: "Avenir Next", "Manrope", sans-serif;
+	--font-base: "Chango";
 	--font-mono: "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 	--h: 180;
 	--s: 2%;
 	--l: 20%;
-	--color-bg: #20672C;
+	--color-bg: #4a9f21;
 	--color-grey-100: #fff;
 	--color-grey-300: #e4e7e7;
 	--color-grey-400: #c9cfcf;
@@ -28,6 +38,11 @@
 	box-sizing: border-box;
 }
 
+.text-stroke-thin {
+    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-color: #000;
+}
+
 html {
 	height: 100%;
 }
@@ -40,14 +55,11 @@ body,
 }
 
 body {
+	font-family: 'Chango';
 	min-height: 100%;
 	font-family: var(--font-base);
 	background-color: var(--color-bg);
 	color: var(--color-grey-100);
-	background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
-    url('/nft_bg.jpg');    background-size: cover; /* Ensure it covers the entire element */
-    background-position: center; /* Center the background image */
 }
 
 pre,
@@ -76,4 +88,5 @@ li {
 header {
 	position: fixed;
 	width: 100%;
+	z-index: 100000;
 }

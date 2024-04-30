@@ -128,7 +128,7 @@ export default function Home() {
 							width="60"
 						/>
 						<div className={styles.logoTextContainer}>
-							<h1 className={styles.logoTitle}>OG Pepe</h1>
+							<h1 className={styles.logoTitle}></h1>
 							<p className={styles.logoSubtitle}>The Original PEPE</p>
 						</div>
 					</div>
