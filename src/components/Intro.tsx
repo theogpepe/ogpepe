@@ -708,7 +708,7 @@ const Intro: React.FC = () => {
                     Q1 2024
                   </div>
                   <div className="z-10 text-shadow font-chango text-[#FF4155] text-2xl text-center text-stroke-thin leading-7">
-                    OGPEPE and Many Memes
+                  DEX Launch
                   </div>
                 </div>
               </div>
@@ -722,14 +722,14 @@ const Intro: React.FC = () => {
                   decoding="async"
                   data-nimg="1"
                   style={{ borderRadius: "10px", color: "transparent" }}
-                  src="./roadmap4.png"
+                  src="./roadmap6.png"
                 />
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 w-full items-center">
                   <div className="font-extrabold font-inter text-center text-orange-500 text-xs uppercase">
-                    Q4 2023
+                    Q2 2024
                   </div>
                   <div className="z-10 text-shadow font-chango text-xl text-center text-white text-stroke-thin leading-7">
-                    Community Formed Spontaneously and Dev Comes Back
+                    Chad Airdrop
                   </div>
                 </div>
               </div>
@@ -742,15 +742,36 @@ const Intro: React.FC = () => {
                   height="60"
                   decoding="async"
                   data-nimg="1"
-                  style={{ color: "transparent" }}
-                  src="./roadmap5.png"
+                  style={{ color: "transparent", borderRadius:"10px" }}
+                  src="./roadmap7.png"
                 />
                 <div className="flex flex-col gap-2">
                   <div className="font-extrabold font-inter text-center text-orange-500 text-xs uppercase">
-                    Q1 2024
+                    Q3 2024
+                  </div>
+                  <div className="z-10 text-shadow font-chango text-xl text-center text-blue-500 text-stroke-thin leading-7">
+                    Wojak.farm Integration
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[url('/right.png')] flex justify-end col-span-2 bg-[length:350px_90px] bg-no-repeat bg-bottom pb-20">
+              <div className="flex flex-row items-center max-w-[430px] w-full gap-4 border-2 bg-[#abaaf7] box-card-shadow-2 p-4 border-black rounded-2xl">
+                <img
+                  alt="phase 4"
+                  width="60"
+                  height="60"
+                  decoding="async"
+                  data-nimg="1"
+                  style={{ borderRadius: "10px", color: "transparent" }}
+                  src="./roadmap8.png"
+                />
+                <div className="flex flex-col gap-2">
+                <div className="font-extrabold font-inter text-center text-orange-500 text-xs uppercase">
+                    Q4 2024
                   </div>
                   <div className="z-10 text-shadow font-chango text-[#FF4155] text-2xl text-center text-stroke-thin leading-7">
-                    OGPEPE and Many Memes
+                    Audits, Partnerships, and Integrations
                   </div>
                 </div>
               </div>
