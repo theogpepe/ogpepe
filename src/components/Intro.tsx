@@ -150,12 +150,12 @@ const Intro: React.FC = () => {
         <div className="flex flex-col justify-start items-center bg-[url('/coins-bg.png')] bg-contain bg-no-repeat bg-top w-full max-w-4xl">
           <div className="relative flex justify-center">
             <img
-              src="./pepe-big.png"
+              src="./pepe-temp.png"
               className="w-4/6 md:w-[325px] md:h-[308px]"
             ></img>
             <img
               src="./glass.png"
-              className="top-7 md:top-20 left-8 md:left-9 absolute w-3/6 md:w-[182px] md:h-[45px] hover:animate-shake"
+              className="top-7 md:top-28 left-4 md:-left-0 absolute w-3/6 md:w-[205px] md:h-[72px] hover:animate-shake"
             ></img>
           </div>
           <h1
