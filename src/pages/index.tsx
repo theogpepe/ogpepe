@@ -129,6 +129,13 @@ export default function Home() {
     );
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(isOpen);
+    console.log("toggling")
+  };
+
   return (
     <>
       <Head>
@@ -146,7 +153,7 @@ export default function Home() {
             <img
               src="/logo.png"
               alt="PEPE Logo"
-              height="60" // Increased size for more prominence
+              height="60"
               width="60"
             />
             <div className={styles.logoTextContainer}>
@@ -155,22 +162,15 @@ export default function Home() {
             </div>
           </div>
           {/* Navigation Menu */}
-          <nav className={styles.menuLink}>
-            <Link href="/" className={styles.navLink}>
-              Home
-            </Link>
-            <Link href="/" className={styles.navLink}>
-              About
-            </Link>
-            <Link href="/" className={styles.navLink}>
-              PEPE
-            </Link>
-            <Link href="/" className={styles.navLink}>
-              CHAD
-            </Link>
-            <Link href="https://swap.ogpepe.io" className={styles.navLink}>
-              DEX
-            </Link>
+          <button className={styles.hamburger} onClick={toggleMenu}>
+            &#9776; {/* Unicode for hamburger icon */}
+          </button>
+          <nav className={`${styles.menuLink} ${isOpen ? 'active' : ''}`}>
+            <Link href="/" className={styles.navLink} onClick={() => setIsOpen(false)}>Home</Link>
+            <Link href="/info" className={styles.navLink} onClick={() => setIsOpen(false)}>About</Link>
+            <Link href="/pepe" className={styles.navLink} onClick={() => setIsOpen(false)}>PEPE</Link>
+            <Link href="/chad" className={styles.navLink} onClick={() => setIsOpen(false)}>CHAD</Link>
+            <Link href="https://wojak.farm" className={styles.navLink} onClick={() => setIsOpen(false)}>WOJAK</Link>
             {/* Add more links as needed */}
           </nav>
           <div className={styles.buttons}>
@@ -181,4 +181,4 @@ export default function Home() {
       <Intro />
     </>
   );
-}
+};

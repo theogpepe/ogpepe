@@ -165,27 +165,26 @@ const Intro: React.FC = () => {
             Unleashing the Titan of Memes
           </h1>
           <button className="hover:scale-125 border-2 bg-slate-200 hover:bg-slate-300 box-shadow text-shadow px-4 py-1 border-black rounded-md font-chango text-green-300 text-lg text-stroke-thin hover:text-green-500 whitespace-nowrap hover:animate-pulse duration-300 ease-in">
-            Buy Now
-          </button>
-          <div className="flex md:flex-row flex-col gap-4 mt-8">
             <a
-              href="https://x.com/memeogpepecoin"
+              href="https://app.uniswap.org/#/swap?outputCurrency=0x4dFae3690b93c47470b03036A17B23C1Be05127C"
               target="_blank"
               className="flex justify-center items-center gap-x-2"
             >
               <img
-                alt="x icon"
+                alt="telegram icon"
                 width="44"
                 height="44"
                 decoding="async"
                 data-nimg="1"
                 className="w-8 h-8"
                 style={{ color: "transparent" }}
-                src="./socials/x-logo.png"
+                src="./socials/uniswap-logo.png"
               />
-            </a>
+            </a>Buy Now
+          </button>
+          <div className="flex md:flex-row flex-col gap-4 mt-8">
             <a
-              href="https://ogpepe.io"
+              href="https://app.uniswap.org/#/swap?outputCurrency=0x4dFae3690b93c47470b03036A17B23C1Be05127C"
               target="_blank"
               className="flex justify-center items-center gap-x-2"
             >
@@ -201,7 +200,55 @@ const Intro: React.FC = () => {
               />
             </a>
             <a
-              href="https://t.me/memeogpepecoin"
+              href="https://x.com/theogpepe2020"
+              target="_blank"
+              className="flex justify-center items-center gap-x-2"
+            >
+              <img
+                alt="x icon"
+                width="44"
+                height="44"
+                decoding="async"
+                data-nimg="1"
+                className="w-8 h-8"
+                style={{ color: "transparent" }}
+                src="./socials/x-logo.png"
+              />
+            </a>
+            <a
+              href="https://www.dextools.io/app/es/ether/pair-explorer/0xa84181f223a042949e9040e42b44c50021802db6"
+              target="_blank"
+              className="flex justify-center items-center gap-x-2"
+            >
+              <img
+                alt="telegram icon"
+                width="44"
+                height="44"
+                decoding="async"
+                data-nimg="1"
+                className="w-8 h-8"
+                style={{ color: "transparent" }}
+                src="./socials/dextools-logo.png"
+              />
+            </a>
+            <a
+              href="https://github.com/theogpepe"
+              target="_blank"
+              className="flex justify-center items-center gap-x-2"
+            >
+              <img
+                alt="telegram icon"
+                width="44"
+                height="44"
+                decoding="async"
+                data-nimg="1"
+                className="w-8 h-8"
+                style={{ color: "transparent" }}
+                src="./socials/github-logo.png"
+              />
+            </a>
+            <a
+              href="https://t.me/OgPeperc20"
               target="_blank"
               className="flex justify-center items-center gap-x-2"
             >
@@ -217,7 +264,7 @@ const Intro: React.FC = () => {
               />
             </a>
             <a
-              href="https://ogpepe.io/info"
+              href="https://docs.ogpepe.io/"
               target="_blank"
               className="flex justify-center items-center gap-x-2"
             >
@@ -248,24 +295,11 @@ const Intro: React.FC = () => {
                 src="./socials/medium-logo.png"
               />
             </a>
-            <a
-              href="https://github.com/theogpepe"
-              target="_blank"
-              className="flex justify-center items-center gap-x-2"
-            >
-              <img
-                alt="telegram icon"
-                width="44"
-                height="44"
-                decoding="async"
-                data-nimg="1"
-                className="w-8 h-8"
-                style={{ color: "transparent" }}
-                src="./socials/github-logo.png"
-              />
-            </a>
           </div>
         </div>
+        <TimeSinceDeployment />
+
+
       </div>
 
       <div className="bg-[url('/separator-1.png')] bg-[length:250px_50px] bg-repeat-x w-full h-[50px]"></div>
@@ -280,12 +314,11 @@ const Intro: React.FC = () => {
           </h2>
           <div className="text-black mb-6 font-extrabold font-inter text-xl uppercase font-sans w-full text-center"></div>
           <div className="text-black text-xl leading-normal font-sans w-full max-w-[720px]">
-            Welcome to , the home of the oldest and rarest Pepe tokens. With a
-            circulating supply of just 37,321 tokens and a commitment to 0/0
-            tax, no team wallets, or any sketchy shenanigans, stands as a beacon
-            of transparency and community-driven success in the crypto world.
-            Join us as we aim to flip the price of ETH and BTC, gaining
-            international visibility and notoriety for our beloved brand.
+            <p>Welcome to the Home of the Oldest & Rarest PEPE on Ethereum.</p>
+            <p>             We stand as a beacon of Transparency & Community-driven Success in the Crypto World. With 20% of Tokens Burnt, a circulating supply of just 37,321 PEPE, Taxes at 0%, and No team wallets or other sketchy shenanigans...we will aim to Flip the Price of Bitcoin.
+            </p>
+            <p>Join us as we gain International Visibility for our Beloved PEPE!</p>
+            <p>Truly, The Bitcoin of Memecoins!</p>
           </div>
         </div>
       </section>
@@ -324,7 +357,7 @@ const Intro: React.FC = () => {
                   Visit{" "}
                   <a
                     className=" text-[#0096FF]"
-                    href="https://app.uniswap.com/"
+                    href="https://app.uniswap.org/#/swap?outputCurrency=0x4dFae3690b93c47470b03036A17B23C1Be05127C/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -371,7 +404,7 @@ const Intro: React.FC = () => {
                   <div className="font-inter text-normal">
                     Go to
                     <a
-                      href="https://jup.ag/"
+                      href="https://app.uniswap.org/#/swap?outputCurrency=0x4dFae3690b93c47470b03036A17B23C1Be05127C"
                       target="_blank"
                       className="font-inter text-blue-500 text-normal"
                     >
@@ -413,20 +446,12 @@ const Intro: React.FC = () => {
               </div>
               <div className="relative flex flex-col gap-4 border-2 bg-[#C9FFB6] box-card-shadow-2 px-8 py-10 p-8 border-black rounded-2xl w-3/4 md:w-2/3 rotate-3">
                 <div className="top-1/3 -left-10 absolute bg-[url('/app/num1.png')] bg-contain bg-no-repeat w-16 h-full"></div>
-                <div className="font-extrabold font-inter text-xl">
-                  MemeOGPepe: Unleashing the Power of Meme Coins on the Dynamic
-                  Canvas
-                </div>
-                <div className="text-lg leading-normal">
-                  The MEMEOGPEPE platform introduces a dynamic and interactive
-                  advertising canvas, a sprawling 1250 by 800 pixel grid, where
-                  the vibrant world of meme coins converges.
-                </div>
-                <div className="text-lg leading-normal">
-                  This digital billboard serves as a unique stage for meme coins
-                  to showcase themselves, each claiming their spot within this
-                  pixelated expanse.
-                </div>
+                <h2><i className="fas fa-leaf token-icon"></i>Welcome to Wojak.Farm (WOJAK)</h2>
+                <p>At Wojak.Farm, we pride ourselves on offering a robust ecosystem designed to empower our community. Here's what you need to know about WOJAK:</p>
+                <ul>
+                  <li><i className="fas fa-certificate"></i> <strong>Capped Supply:</strong> With a maximum supply of 11,000 WOJAK tokens, we ensure stability and reliability.</li>
+                  <li><i className="fas fa-hand-holding-usd"></i> <strong>Staking Rewards:</strong> Stake your WOJAK tokens and unlock the potential to earn PEPE rewards, enriching your engagement within our ecosystem.</li>
+                </ul>
               </div>
             </div>
             <div className="flex md:flex-row-reverse flex-col items-center md:items-start gap-y-4 md:gap-y-0 md:gap-x-4 px-4">
@@ -445,22 +470,17 @@ const Intro: React.FC = () => {
               </div>
               <div className="relative flex flex-col gap-4 border-2 bg-[#E1DEFE] box-card-shadow-2 px-8 py-10 p-8 border-black rounded-2xl w-3/4 md:w-2/3 -rotate-3">
                 <div className="top-1/3 -right-10 absolute bg-[url('/app/num2.png')] bg-contain bg-no-repeat w-16 h-full"></div>
-                <div className="font-extrabold font-inter text-xl">
-                  Unlocking Digital Real Estate: Staking OG PEPE Coins for Meme
-                  Coin Advertising on MEMEOGPEPE
-                </div>
-                <div className="text-lg leading-normal">
-                  To secure a piece of this digital real estate, meme coin
-                  creators must engage with the MEMEOGPEPE ecosystem by staking
-                  OG PEPE coins. This initial stake acts as a key, unlocking the
-                  ability to rent space on the grid. From there, advertisers
-                  have the flexibility to rent their pixel plots for any
-                  duration, ranging from a single month to several months,
-                  tailoring their campaign lengths to their needs and ambitions.
-                </div>
+                <h2><i className="fab fa-pagelines token-icon"></i>Pepe (PEPE)</h2>
+                <p>Experience the rewards and engagement of our ecosystem with PEPE:</p>
+                <ul>
+                  <li><i className="fas fa-coins"></i> <strong>User Incentives:</strong> PEPE incentivizes active participation within our community.</li>
+                  <li><i className="fas fa-gift"></i> <strong>Reward Mechanism:</strong> Earn PEPE tokens by staking WOJAK and contributing ETH tax to CHAD.</li>
+                  <li><i className="fas fa-calculator"></i> <strong>Tax Calculation:</strong> The Oracle facilitates tax calculation, ensuring transparency and accuracy.</li>
+                  <li><i className="fas fa-cogs"></i> <strong>Future Development:</strong> While minting is currently inactive, we are working on implementing PEPE burn features to enhance the ecosystem's sustainability.</li>
+                </ul>
               </div>
             </div>
-            {/* <div className="flex md:flex-row flex-col items-center md:items-start gap-y-4 md:gap-y-0 md:gap-x-4 px-4">
+            <div className="flex md:flex-row flex-col items-center md:items-start gap-y-4 md:gap-y-0 md:gap-x-4 px-4">
               <div className="relative flex justify-center items-center bg-[url('/app/star3_1.png')] bg-[length:24px_24px] bg-no-repeat pr-12 w-5/6 md:w-1/4 h-full text-center align-center">
                 <img
                   alt="Pic 2"
@@ -475,18 +495,13 @@ const Intro: React.FC = () => {
               </div>
               <div className="relative flex flex-col gap-4 border-2 bg-[#FFE6B6] box-card-shadow-2 px-8 py-10 p-8 border-black rounded-2xl w-3/4 md:w-2/4 rotate-3">
                 <div className="top-1/3 -left-10 absolute bg-[url('/app/num3.png')] bg-contain bg-no-repeat w-16 h-full"></div>
-                <div className="font-extrabold font-inter text-xl">
-                  Active Engagement and Investment through OG PEPE Rent Payments
-                </div>
-                <div className="text-lg leading-normal">
-                  This model encourages active participation and investment in
-                  the MEMEOGPEPE community, as the rent paid in OG PEPE not only
-                  fuels the ecosystem but also ensures that only the most
-                  dedicated meme coins get the spotlight. Should an advertiser
-                  decide to conclude their campaign, they can simply cease their
-                  rental payments and unstake their OG PEPE, retrieving their
-                  investment and making room for new entrants on the grid.
-                </div>
+                <h2><i className="fas fa-dumbbell token-icon"></i>Chad</h2>
+                <p>Discover the essential role played by CHAD within our ecosystem:</p>
+                <ul>
+                  <li><i className="fas fa-file-invoice-dollar"></i> <strong>Tax Collection:</strong> CHAD collects PEPE tax to maintain the sustainability and balance of our ecosystem.</li>
+                  <li><i className="fas fa-hand-holding-usd"></i> <strong>ETH Rewards:</strong> Burn CHAD tokens to receive accumulated ETH rewards.</li>
+                  <li><i className="fas fa-certificate"></i> <strong>Supply Cap:</strong> With a maximum supply of 182k, CHAD implements deflationary mechanisms to foster long-term value.</li>
+                </ul>
               </div>
             </div>
             <div className="flex md:flex-row-reverse flex-col items-center md:items-start gap-y-4 md:gap-y-0 md:gap-x-4 mb-4 px-4">
@@ -504,17 +519,15 @@ const Intro: React.FC = () => {
               </div>
               <div className="relative flex flex-col gap-4 border-2 bg-[#E1F4FF] box-card-shadow-2 px-8 py-10 p-8 border-black rounded-2xl w-3/4 md:w-2/4 -rotate-3">
                 <div className="top-1/3 -right-10 absolute bg-[url('/app/num4.png')] bg-contain bg-no-repeat w-16 h-full"></div>
-                <div className="font-extrabold font-inter text-xl">
-                  Where OG PEPE Sparks Creativity in a Dynamic Marketplace
-                </div>
-                <div className="text-lg leading-normal">
-                  In essence, MEMEOGPEPE's grid stands as a bustling marketplace
-                  of ideas and promotions, where the currency of creativity is
-                  OG PEPE itself. It's a space that's both ever-changing and
-                  dynamic, reflecting the pulse of the meme coin universe.
-                </div>
+                <h2><i className="fas fa-leaf token-icon"></i>Welcome to Wojak.Farm Ecosystem</h2>
+  <p>Explore the vibrant ecosystem of Wojak.Farm, where innovation meets community:</p>
+  <ul>
+    <li><i className="fas fa-certificate"></i> <strong>WOJAK Token:</strong> Our foundational token with a capped supply of 11,000, offering stability and staking rewards.</li>
+    <li><i className="fab fa-pagelines"></i> <strong>PEPE Token:</strong> Incentivizing engagement and participation through rewards and tax contributions.</li>
+    <li><i className="fas fa-dumbbell"></i> <strong>CHAD Token:</strong> The powerhouse ensuring economic equilibrium through tax collection and ETH rewards.</li>
+  </ul>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
@@ -575,7 +588,7 @@ const Intro: React.FC = () => {
                   />
                 </div>
                 <div className="font-extrabold font-inter text-center text-sm uppercase">
-                  LP tokens are burnt
+                  LP tokens are locked
                 </div>
               </div>
               <div className="flex flex-col items-center gap-4 mx-auto max-w-[120px]">
@@ -591,7 +604,7 @@ const Intro: React.FC = () => {
                   />
                 </div>
                 <div className="font-extrabold font-inter text-center text-sm uppercase">
-                  Contract ownership is renounced
+                  Contract ownership is NOT renounced
                 </div>
               </div>
             </div>
@@ -642,7 +655,7 @@ const Intro: React.FC = () => {
                 />
                 <div className="flex flex-col gap-4 w-full">
                   <div className="font-extrabold font-inter text-center text-orange-500 text-xs uppercase">
-                    Q4 2021-2022
+                    2021-2022
                   </div>
                   <div className="z-10 text-shadow font-chango text-2xl text-center text-pink-500 text-stroke-thin leading-7">
                     Hibernate Phase
@@ -708,7 +721,7 @@ const Intro: React.FC = () => {
                     Q1 2024
                   </div>
                   <div className="z-10 text-shadow font-chango text-[#FF4155] text-2xl text-center text-stroke-thin leading-7">
-                  DEX Launch
+                    DEX Launch
                   </div>
                 </div>
               </div>
@@ -742,7 +755,7 @@ const Intro: React.FC = () => {
                   height="60"
                   decoding="async"
                   data-nimg="1"
-                  style={{ color: "transparent", borderRadius:"10px" }}
+                  style={{ color: "transparent", borderRadius: "10px" }}
                   src="./roadmap7.png"
                 />
                 <div className="flex flex-col gap-2">
@@ -767,7 +780,7 @@ const Intro: React.FC = () => {
                   src="./roadmap8.png"
                 />
                 <div className="flex flex-col gap-2">
-                <div className="font-extrabold font-inter text-center text-orange-500 text-xs uppercase">
+                  <div className="font-extrabold font-inter text-center text-orange-500 text-xs uppercase">
                     Q4 2024
                   </div>
                   <div className="z-10 text-shadow font-chango text-[#FF4155] text-2xl text-center text-stroke-thin leading-7">
@@ -832,12 +845,7 @@ export default Intro;
 </div>
 </div>
 
-<div className={styles.mainContent}>
 
-<div className={styles.socialContainer}>
-<SocialLinks />
-</div>
-</div>
 
 
 

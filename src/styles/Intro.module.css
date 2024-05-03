@@ -58,11 +58,12 @@
 }
 
 .timer {
-  background-color: #333; /* Dark background for timer */
+  background-color: #66974C; /* Dark background for timer */
   color: #fff; /* White text */
   padding: 20px;
   border-radius: 15px;
   font-size: 1.5rem; /* Larger font size for timer */
+  margin-top: 32px;
 }
 
 /* Responsive adjustments */
