@@ -155,7 +155,7 @@ const Intro: React.FC = () => {
             ></img>
             <img
               src="./glass.png"
-              className="top-7 md:top-28 left-4 md:-left-0 absolute w-3/6 md:w-[205px] md:h-[72px] hover:animate-shake"
+              className="top-28 left-16 md:-left-0 absolute w-3/6 md:w-[205px] h-[72px] hover:animate-shake"
             ></img>
           </div>
           <h1
@@ -167,7 +167,7 @@ const Intro: React.FC = () => {
           <button className="hover:scale-125 border-2 bg-slate-200 hover:bg-slate-300 box-shadow text-shadow px-4 py-1 border-black rounded-md font-chango text-green-300 text-lg text-stroke-thin hover:text-green-500 whitespace-nowrap hover:animate-pulse duration-300 ease-in">
             Buy Now
           </button>
-          <div className="flex md:flex-row flex-col gap-4 mt-8">
+          <div className="flex flex-row gap-1 md:gap-4 mt-8">
             <a
               href="https://x.com/memeogpepecoin"
               target="_blank"
@@ -279,7 +279,7 @@ const Intro: React.FC = () => {
             Introduction
           </h2>
           <div className="text-black mb-6 font-extrabold font-inter text-xl uppercase font-sans w-full text-center"></div>
-          <div className="text-black text-xl leading-normal font-sans w-full max-w-[720px]">
+          <div className="text-black text-xl leading-normal font-sans w-full max-w-[420px] md:max-w-[720px]">
             Welcome to , the home of the oldest and rarest Pepe tokens. With a
             circulating supply of just 37,321 tokens and a commitment to 0/0
             tax, no team wallets, or any sketchy shenanigans, stands as a beacon

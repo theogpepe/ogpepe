@@ -219,6 +219,7 @@ span.button:hover {
   
   .logoTextContainer {
 	margin-left: 10px;
+	display:block
   }
   
   .logoTitle {
@@ -256,3 +257,19 @@ span.button:hover {
   .menuLink a:hover {
 	background-color: #3e8e41; /* Darker green on hover */
   }
+
+  @media only screen and (max-width: 1024px) {
+
+	.menuLink{
+		display:none;
+	}
+  }
+
+
+  @media only screen and (max-width: 640px) {
+
+	.logoTextContainer {
+		display:none;
+	  }
+
+	}

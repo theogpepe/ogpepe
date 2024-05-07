@@ -7,12 +7,15 @@ import Link from "next/link";
 import { ABIWOJAK } from "../contracts/ABIS";
 import { formatUnits, BigNumberish } from "ethers";
 import Intro from "@/components/Intro";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoCloseSharp } from "react-icons/io5";
 
 export default function Home() {
   const { connector: activeConnector, isConnected, address } = useAccount();
   const { connect, connectors, error, isLoading, pendingConnector } =
     useConnect();
 
+    const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [totalSupply, setTotalSupply] = useState(0);
   const [burned, setBurned] = useState(0);
   const [circulatingSupply, setCirculatingSupply] = useState(0);
@@ -96,7 +99,6 @@ export default function Home() {
 
   const DappButton = () => {
     const [isHovered, setIsHovered] = useState(false);
-
     const buttonStyle = {
       color: "white",
       //backgroundColor: isHovered ? "#3e8e41" : "#66974C", // Green background, darker on hover
@@ -131,6 +133,31 @@ export default function Home() {
 
   return (
     <>
+       <div className={`fixed w-full h-screen bg-[#4c9540] flex justify-center items-center top-0 z-[100001] ${isMenuOpened?"block":"hidden"}`}>
+        
+        {isMenuOpened?<IoCloseSharp className="text-white absolute top-8 right-4 z-[100002] w-10 h-10 cursor-pointer" onClick={()=>{setIsMenuOpened(false)}}></IoCloseSharp>:<></>}
+        <div className="flex flex-col gap-4">
+          <Link href="/" className={styles.navLink}>
+            Home
+          </Link>
+          <Link href="/" className={styles.navLink}>
+            About
+          </Link>
+          <Link href="/" className={styles.navLink}>
+            PEPE
+          </Link>
+          <Link href="/" className={styles.navLink}>
+            CHAD
+          </Link>
+          <Link href="https://swap.ogpepe.io" className={styles.navLink}>
+            DEX
+          </Link>
+          {/* Add more links as needed */}
+          <Link href="https://swap.ogpepe.io" className={styles.navLink}>
+            Launch App
+          </Link>
+        </div>
+      </div>
       <Head>
         <title>PEPE</title>
         <meta
@@ -141,6 +168,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
+          
         <div className={styles.header}>
           <div className={styles.logoContainer}>
             <img
@@ -172,10 +200,13 @@ export default function Home() {
               DEX
             </Link>
             {/* Add more links as needed */}
-          </nav>
+           
           <div className={styles.buttons}>
-            <DappButton />
+              <DappButton />
           </div>
+          </nav>
+          {!isMenuOpened?
+          <GiHamburgerMenu className="text-white block lg:hidden w-10 h-10 cursor-pointer" onClick={()=>{setIsMenuOpened(true)}}></GiHamburgerMenu>:<></>}
         </div>
       </header>
       <Intro />
