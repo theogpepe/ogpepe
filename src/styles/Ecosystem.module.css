@@ -1,0 +1,54 @@
+/* Ecosystem.module.css */
+
+.ecosystemContainer {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between sections */
+}
+
+.tokenSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.token {
+    flex: 1 1 calc(33% - 20px); /* 3 items per row, accounting for gaps */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tokenImage {
+    margin-bottom: 10px;
+}
+
+.token h3 {
+    margin: 10px 0;
+}
+
+.token a {
+    color: var(--color-pepe);
+    text-decoration: none;
+}
+
+.token a:hover {
+    text-decoration: underline;
+}
+
+.pepexLink {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: var(--color-pepe);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pepexLink:hover {
+    background-color: var(--color-pepe-hover);
+}

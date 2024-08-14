@@ -89,33 +89,6 @@ export default function Home() {
 		);
 	}
 
-	const DappButton = () => {
-		const [isHovered, setIsHovered] = useState(false);
-	  
-		const buttonStyle = {
-		  color: 'black',
-		  backgroundColor: isHovered ? '#3e8e41' : '#66974C', // Green background, darker on hover
-		  padding: '10px 15px',
-		  borderRadius: '8px',
-		  textDecoration: 'none',
-		  transition: 'background-color 0.3s ease',
-		  margin: '10px',
-		  display: 'inline-block', // To maintain button shape
-		  cursor: 'pointer', // Change cursor on hover
-		};
-	  
-		return (
-		  <div style={{ textAlign: 'center' }}> {/* Center the button container */}
-			<a href="https://swap.ogpepe.io" target="_blank" rel="noopener noreferrer" 
-			   style={buttonStyle}
-			   onMouseEnter={() => setIsHovered(true)}
-			   onMouseLeave={() => setIsHovered(false)}>
-			  Launch APP
-			</a>
-		  </div>
-		);
-	  };
-	  
 
 
 	return (
@@ -148,11 +121,9 @@ export default function Home() {
 					</div>
 					{/* Navigation Menu */}
 					<nav className={styles.menuLink}>
-						<Link href="/" className={styles.navLink}>Home</Link>
-						<Link href="/info" className={styles.navLink}>About</Link>
-						<Link href="/pepe" className={styles.navLink}>PEPE</Link>
-						<Link href="/chad" className={styles.navLink}>CHAD</Link>
-						<Link href="https://swap.ogpepe.io" className={styles.navLink}>DEX</Link>
+					<Link href="/" className={styles.navLink}>Home</Link>
+            <Link href="/charts" className={styles.navLink}>Charts</Link>
+            <Link href="https://pepex.app" className={styles.navLink}>DEX</Link>
 						{/* Add more links as needed */}
 					</nav>
 					<div className={styles.buttons}>
@@ -162,7 +133,6 @@ export default function Home() {
 				</div>
 			</header>
 			<Intro />
-			<DappButton />
 		</>
 	);
 }

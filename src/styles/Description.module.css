@@ -1,0 +1,47 @@
+.container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.introSection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imageWrapper {
+    margin-right: 20px;
+}
+
+.introText {
+    flex: 1;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logoSection {
+    margin-right: 10px;
+}
+
+.addressSection {
+    margin-top: 10px;
+}
+
+.addressLink {
+    color: var(--color-pepe);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.addressLink:hover {
+    text-decoration: underline;
+}

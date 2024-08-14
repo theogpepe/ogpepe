@@ -4,10 +4,10 @@ import styled from 'styled-components';
 // Define your green-themed color palette
 const theme = {
     primary: '#000', // A vibrant shade of green
-    secondary: '#66974C', // Light green
+    secondary: 'var(--color-pepe)', // Light green
     interactive: '#20672C', // Lime green, more vibrant
     container: '#3e8e41', // Pale green, for backgrounds
-    module: '#66974C', // Honeydew, lighter for modules
+    module: 'var(--color-pepe)', // Honeydew, lighter for modules
     accent: '#3e8e41', // Medium sea green, for accents
     outline: '#2E8B57', // Dark sea green, for outlines
   };

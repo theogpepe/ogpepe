@@ -1,0 +1,112 @@
+/* Disclaimer.module.css */
+
+.disclaimerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+    max-width: 90%; /* Ensures it fits well on small screens */
+    margin: auto;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.title {
+    font-size: 2rem; /* Larger size for emphasis */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    gap: 20px; /* Space between sections */
+    width: 100%; /* Full width for better responsiveness */
+}
+
+.subtitle {
+    font-size: 1.5rem; /* Adjusted size for subheadings */
+    margin-bottom: 15px;
+}
+
+.heading {
+    font-size: 1.2rem; /* Adjusted size for headings */
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.text {
+    font-size: 1rem; /* Base font size */
+    line-height: 1.6; /* Improved readability */
+    margin-bottom: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 18px;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .heading {
+        font-size: 1.1rem;
+    }
+
+    .text {
+        font-size: 0.95rem;
+    }
+
+    .disclaimerContainer {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 16px;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .heading {
+        font-size: 1rem;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+
+    .disclaimerContainer {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Small phones */
+    .title {
+        font-size: 1.4rem;
+        margin-bottom: 14px;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .heading {
+        font-size: 0.9rem;
+    }
+
+    .text {
+        font-size: 0.85rem;
+    }
+
+    .disclaimerContainer {
+        padding: 14px;
+    }
+}

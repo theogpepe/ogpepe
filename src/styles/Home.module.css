@@ -27,6 +27,17 @@
 	/* Rest of your styling */
   }
 
+
+.dexComponent {
+    margin-top: 80px; /* Adjust based on your header height */
+}
+
+/* Additional CSS for the DEX component if needed */
+.dexComponent {
+    padding: 20px;
+}
+
+
 .header .buttons {
 	display: flex;
 	align-items: center;
@@ -236,7 +247,7 @@ span.button:hover {
 
   .menuLink a {
 	color: black;
-	background-color: #66974C; /* Green background */
+	background-color: var(--color-pepe); /* Green background */
 	padding: 10px 15px;
 	border-radius: 8px;
 	text-decoration: none;
@@ -249,3 +260,5 @@ span.button:hover {
   .menuLink a:hover {
 	background-color: #3e8e41; /* Darker green on hover */
   }
+
+  

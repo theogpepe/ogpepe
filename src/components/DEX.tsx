@@ -5,91 +5,6 @@ import { MY_TOKEN_LIST } from '../utils/constants';
 import styles from "@/styles/DEX.module.css";
 import Image from 'next/image';
 
-const TimeSinceDeployment = () => {
-    const [timeSinceDeployment, setTimeSinceDeployment] = useState('');
-
-    useEffect(() => {
-        const deploymentTimestamp = 1602340728; // Replace with actual deployment timestamp
-        const deploymentTime = new Date(deploymentTimestamp * 1000);
-
-        const interval = setInterval(() => {
-            const now = new Date();
-            const timeDifference = now.getTime() - deploymentTime.getTime();
-
-            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-            setTimeSinceDeployment(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    return (
-        <div className={styles.timerInfo}>
-            <p className={styles.timer}>Age: {timeSinceDeployment}</p>
-        </div>
-    );
-};
-
-interface IntroProps {
-    price: number;
-    marketCap: number;
-}
-
-const Intro: React.FC<IntroProps> = ({ price, marketCap }) => {
-    return (
-        <div className={styles.container}>
-            {/* Header with Title and Address */}
-            <div className={styles.addressSection}>
-                    <a href="https://etherscan.io/token/0x4dfae3690b93c47470b03036A17B23C1Be05127C"
-                        target="_blank" rel="noopener noreferrer"
-                        className={styles.addressLink}>
-                        0x4dFae3690b93c47470b03036A17B23C1Be05127C
-                    </a>
-                </div>
-            <div className={styles.header}>
-                
-                <div className={styles.logoAddress}>
-                    <div className={styles.logoSection}>
-                        <Image
-                            src="/logo.png"
-                            alt="The Original Pepe Logo"
-                            width={64}
-                            height={64}
-                        />
-                    </div>
-                    <h1 className={styles.title}>The Original Pepe </h1>
-                </div>
-            </div>
-            {/* Main Content with Stats and Social Links */}
-            <div className={styles.mainContent}>
-                <div className={styles.stats}>
-                    <div className={styles.infoItem}>
-                        <span className={styles.infoLabel}>Price:</span>
-                        <span className={styles.keyInfo}>{formatCurrency(price.toString())}</span>
-                    </div>
-                    <div className={styles.infoItem}>
-                        <span className={styles.infoLabel}>Market Cap:</span>
-                        <span className={styles.keyInfo}>{formatCurrency(marketCap.toString())}</span>
-                    </div>
-                </div>
-                <div className={styles.socialContainer}>
-                    <SocialLinks />
-                </div>
-            </div>
-
-
-            {/* Timer at the Bottom */}
-            <TimeSinceDeployment />
-        </div>
-    );
-};
-
-
-
 
 
 interface Pool {
@@ -347,13 +262,6 @@ export const DEX = () => {
 
     return (
         <div>
-            <Intro
-            
-                price={price}
-                marketCap={marketCap}
-            // ... and other props you need to pass
-            />
-
             <div className={styles.chartSwapperContainer}>
                 <div>
                     <h1>Pools</h1>

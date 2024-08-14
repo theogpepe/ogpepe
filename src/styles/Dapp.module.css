@@ -209,7 +209,7 @@
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  background-color: #66974C;
+  background-color: var(--color-pepe);
   border: 2px solid #dedede;
   margin: 0.7rem;
   padding: 1.5rem 1rem 0rem 1rem;
@@ -307,7 +307,7 @@
 .farm .content .farm_info .inner {
   position: relative;
   overflow: hidden;
-  background-color: #66974C;
+  background-color: var(--color-pepe);
   border: 2px solid #dedede;
   margin: 0.7rem;
   padding: 1.5rem 1rem;

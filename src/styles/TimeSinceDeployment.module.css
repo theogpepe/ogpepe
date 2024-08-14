@@ -1,0 +1,19 @@
+/* TimeSinceDeployment.module.css */
+
+.timerInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Adjust as needed */
+}
+
+.logoImage {
+    margin-right: 8px; /* Space between image and text */
+}
