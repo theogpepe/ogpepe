@@ -14,7 +14,9 @@
 
 .logoImage {
     border-radius: 50%; /* Optional: adds rounded corners to logos */
-    padding: 1px; /* Add padding around each logo image */
+    padding: 4px; /* Add padding around each logo image */
+    background: linear-gradient(135deg, var(--color-pepe), var(--color-pepe-dark)); /* Gradient background */
+    border-radius: 6px;
 }
 
 /* Optional: Responsive adjustments */

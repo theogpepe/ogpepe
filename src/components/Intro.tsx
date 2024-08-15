@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+import React from 'react';
 import styles from "@/styles/DEX.module.css";
 import Roadmap from './Roadmap';
 import Disclaimer from './Disclaimer';
@@ -7,19 +6,24 @@ import HowToBuy from './HowToBuy';
 import Ecosystem from './Ecosystem';
 import Description from './Description';
 
-
-
-
-
-// Main Intro component that puts everything together
 const Intro: React.FC = () => {
     return (
         <div className={styles.container}>
-            <Description />
-            <Ecosystem />
-            <Roadmap />
-            <HowToBuy />
-            <Disclaimer />
+            <div className={styles.componentSpacing}>
+                <Description />
+            </div>
+            <div className={styles.componentSpacing}>
+                <Ecosystem />
+            </div>
+            <div className={styles.componentSpacing}>
+                <Roadmap />
+            </div>
+            <div className={styles.componentSpacing}>
+                <HowToBuy />
+            </div>
+            <div className={styles.componentSpacing}>
+                <Disclaimer />
+            </div>
         </div>
     );
 };

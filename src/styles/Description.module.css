@@ -2,6 +2,8 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, var(--color-pepe-dark), var(--color-pepe)); /* Gradient background */
+
 }
 
 .description {
@@ -9,10 +11,14 @@
 }
 
 .introSection {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: column; /* Default: items side by side */
+    gap: 20px; /* Space between items */
 }
+
 
 .imageWrapper {
     margin-right: 20px;

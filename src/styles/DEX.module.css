@@ -323,3 +323,7 @@
       width: 80%;
   }
 }
+
+.componentSpacing {
+  margin-bottom: 40px; /* Adjust the value to your desired spacing */
+}

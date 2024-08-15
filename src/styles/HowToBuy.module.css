@@ -1,5 +1,7 @@
 .howToBuyContainer {
     padding: 20px;
+    background: linear-gradient(135deg, var(--color-pepe-dark), var(--color-pepe)); /* Gradient background */
+    border-radius: 8px;
 }
 
 .buySteps {
@@ -59,15 +61,3 @@
     }
 }
 
-.docs a {
-    color: black;
-    background-color: var(--color-pepe); /* Green background */
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .docs a:hover {
-    background-color: #3e8e41; /* Darker green on hover */
-  }

@@ -66,3 +66,30 @@
     width: 100%;
   }
 }
+
+.docs a {
+  color: black;
+  background-color: var(--color-pepe); /* Green background */
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.docs a:hover {
+  background-color: #3e8e41; /* Darker green on hover */
+}
+
+.tokenomicsContainer {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center text */
+  color: #ffffff; /* Text color */
+}
+
+.tokenomicsContent h3 {
+  margin: 10px 0;
+  font-size: 1.5rem; /* Larger font size */
+  color: #f0f0f0; /* Light color for text */
+}
