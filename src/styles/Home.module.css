@@ -233,20 +233,21 @@ span.button:hover {
   
   .logoTitle {
 	font-size: 28px; /* Increased size for the main title */
-	color: #000000; /* Black color for the title */
+	color: #ffffff; /* Black color for the title */
 	margin: 0;
 	font-weight: bold;
   }
   
   .logoSubtitle {
 	font-size: 18px; /* Larger size for the subtitle */
-	color: #000000; /* Black color for the subtitle */
+	color: #ffffff; /* Black color for the subtitle */
 	margin: 0;
 	font-weight: bold; /* Making subtitle bold */
   }
 
   .menuLink a {
-	color: black;
+	color: white;
+	font-weight: bold;
 	background-color: var(--color-pepe); /* Green background */
 	padding: 10px 15px;
 	border-radius: 8px;
