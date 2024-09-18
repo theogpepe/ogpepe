@@ -44,10 +44,6 @@ const IntroductionSection: React.FC = () => {
                         Rooted in game theory, it&apos;s part of a dynamic,
                     interconnected token ecosystem launched in 2020.
                 </p>
-                <p>
-                    Understanding Pepe
-                    requires grasping its relationship with other tokens: $WOJAK and $CHAD.
-                </p>
             </div>
             <Tokenomics />
 

@@ -5,13 +5,7 @@ import Image from 'next/image';
 const Disclaimer: React.FC = () => {
     return (
         <div className={styles.disclaimerContainer}>
-                        <Image
-                                width={1440}
-                                height={286}
-                                src="/images/pepebanner.png"
-                                alt="Banner"
-                                className={styles.stepImage}
-                            />
+
             <h1 className={styles.title}>$PEPE Disclaimer</h1>
             
             <div className={styles.section}>
