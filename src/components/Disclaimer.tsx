@@ -15,10 +15,6 @@ const Disclaimer: React.FC = () => {
                     <p>$PEPE is a memecoin with no intrinsic value or expectation of financial return. Engaging with $PEPE involves a high risk, including the possibility of total financial loss. It is not a store of value, and additional tokens may be created, which could further impact its value.</p>
                 </div>
                 <div className={styles.text}>
-                    <h3 className={styles.heading}>Purpose & Intended Use</h3>
-                    <p>$PEPE exists solely for experimentation, learning, and entertainment. The PepeX.app platform is designed for these purposes, but $PEPE is not a platform token. Its use on PepeX should not be interpreted as giving $PEPE any inherent value or utility beyond its experimental nature.</p>
-                </div>
-                <div className={styles.text}>
                     <h3 className={styles.heading}>Risk Acknowledgment & Responsibility</h3>
                     <p>By interacting with $PEPE, you acknowledge the high-risk nature of this token and accept full responsibility for any actions taken, including financial losses. The developers and moderators of $PEPE disclaim all liability for any financial loss or damages incurred. Your participation is entirely at your own risk.</p>
                 </div>
