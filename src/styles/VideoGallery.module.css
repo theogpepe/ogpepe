@@ -1,0 +1,106 @@
+/* Container for the entire gallery */
+.gallery {
+    padding: 20px;
+    max-width: 1000px; /* Increased max width for a better layout */
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 12px; /* Rounded corners */
+}
+
+/* Thumbnail grid layout */
+.thumbnailGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Larger thumbnails */
+    gap: 20px;
+    padding: 10px;
+}
+
+.thumbnail {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden; /* Ensure thumbnails have rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.thumbnail:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.thumbnail p {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #555;
+    padding: 10px;
+}
+
+/* Modal overlay */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    max-width: 80%;
+    width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for the modal */
+}
+
+.modalContent video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for video */
+}
+
+/* Close button styling */
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #3e8e41;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .closeBtn:hover {
+    background-color: darkred;
+  }
+  

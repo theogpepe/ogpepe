@@ -3,6 +3,7 @@ import styles from "@/styles/DEX.module.css";
 import Disclaimer from './Disclaimer';
 import HowToBuy from './HowToBuy';
 import Description from './Description';
+import VideoGallery from './VideoGallery';
 
 const Intro: React.FC = () => {
     return (
@@ -12,6 +13,9 @@ const Intro: React.FC = () => {
             </div>
             <div className={styles.componentSpacing}>
                 <HowToBuy />
+            </div>
+            <div className={styles.componentSpacing}>
+                <VideoGallery />
             </div>
             <div className={styles.componentSpacing}>
                 <Disclaimer />

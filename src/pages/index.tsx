@@ -123,7 +123,6 @@ export default function Home() {
 					<nav className={styles.menuLink}>
 					<Link href="/" className={styles.navLink}>Home</Link>
             <Link href="/charts" className={styles.navLink}>Charts</Link>
-            <Link href="https://pepex.app" className={styles.navLink}>DEX</Link>
 						{/* Add more links as needed */}
 					</nav>
 					<div className={styles.buttons}>

@@ -12,7 +12,7 @@ const Disclaimer: React.FC = () => {
                 <h2 className={styles.subtitle}>Important Notice:</h2>
                 <div className={styles.text}>
                     <h3 className={styles.heading}>No Intrinsic Value & High Risk</h3>
-                    <p>$PEPE is a memecoin with no intrinsic value or expectation of financial return. Engaging with $PEPE involves a high risk, including the possibility of total financial loss. It is not a store of value, and additional tokens may be created, which could further impact its value.</p>
+                    <p>$PEPE is a memecoin with no intrinsic value or expectation of financial return. Engaging with $PEPE involves a high risk, including the possibility of total financial loss.</p>
                 </div>
                 <div className={styles.text}>
                     <h3 className={styles.heading}>Risk Acknowledgment & Responsibility</h3>
