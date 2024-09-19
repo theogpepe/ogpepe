@@ -19,17 +19,10 @@ const videos = [
     },
     {
         src: '/videos/1.mp4',
-        title: ['Major Livestream',
+        title: ['Major Livestream Ep. 99',
             '@VCAdam_eth',
             '09 / 17 / 2024'
         ],
-        thumbnail: '/images/thumb3.png'
-    },
-    {
-        src: '/videos/3.mp4',
-        title: ['Major Livestream #100',
-            '@VCAdam_eth',
-            '09 / 18 / 2024'],
         thumbnail: '/images/thumb3.png'
     },
 ];
