@@ -9,7 +9,7 @@ type Video = {
 
 const videos = [
     {
-        src: '/videos/2.mp4',
+        src: '/videos/pepecryptokings.mp4',
         title: [
             'Crypto Kings',
             '@iambroots & @ianheinishmma',
@@ -18,7 +18,7 @@ const videos = [
         thumbnail: '/images/thumb2.jpg'
     },
     {
-        src: '/videos/1.mp4',
+        src: '/videos/majorlivestream99.mp4',
         title: ['Major Livestream Ep. 99',
             '@VCAdam_eth',
             '09 / 17 / 2024'
