@@ -12,7 +12,7 @@ const videos = [
         src: '/videos/pepecryptokings.mp4',
         title: [
             'Crypto Kings',
-            '@iambroots & @ianheinishmma',
+            '@iambroots & @ianheinischmma',
             '01 / 04 / 2024'
         ],
         thumbnail: '/images/thumb2.jpg'
