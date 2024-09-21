@@ -2,13 +2,12 @@
 	display: grid;
 	place-items: center;
 	height: 100%;
-	padding-top: 80px; /* Adjust this value to match your header's height */
-	background: linear-gradient(
-			to bottom,
+	padding-top: 80px;
+	/* Adjust this value to match your header's height */
+	background: linear-gradient(to bottom,
 			var(--color-bg),
 			transparent,
-			var(--color-bg)
-		),
+			var(--color-bg)),
 		radial-gradient(circle, transparent 0%, var(--color-bg) 70%);
 }
 
@@ -18,23 +17,30 @@
 	align-items: center;
 	padding: 1rem;
 	padding-bottom: 1.75rem;
-	position: fixed; /* Keeps the header fixed at the top */
-	top: 0; /* Aligns the header at the top */
-	left: 0; /* Aligns the header to the left */
-	right: 0; /* Ensures the header spans the full width */
-	z-index: 111111; /* Ensures the header stays above other content */
-	background-color: var(--color-bg); /* Adjust as needed, maybe same as page background */
+	position: fixed;
+	/* Keeps the header fixed at the top */
+	top: 0;
+	/* Aligns the header at the top */
+	left: 0;
+	/* Aligns the header to the left */
+	right: 0;
+	/* Ensures the header spans the full width */
+	z-index: 111111;
+	/* Ensures the header stays above other content */
+	background-color: var(--color-bg);
+	/* Adjust as needed, maybe same as page background */
 	/* Rest of your styling */
-  }
+}
 
 
 .dexComponent {
-    margin-top: 80px; /* Adjust based on your header height */
+	margin-top: 80px;
+	/* Adjust based on your header height */
 }
 
 /* Additional CSS for the DEX component if needed */
 .dexComponent {
-    padding: 20px;
+	padding: 20px;
 }
 
 
@@ -70,53 +76,61 @@
 }
 
 .wrapper li {
-    color: var(--color-grey-400);
-    line-height: 1.75;
-    list-style-type: none; /* This line removes the bullets */
+	color: var(--color-grey-400);
+	line-height: 1.75;
+	list-style-type: none;
+	/* This line removes the bullets */
 }
 
 /* If you have nested lists and only want to remove bullets for the top-level list items */
-.wrapper > ul > li {
-    list-style-type: none;
+.wrapper>ul>li {
+	list-style-type: none;
 }
 
 
 .content {
 	border-radius: 8px;
 	padding: 20px;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
-	margin-bottom: 20px; /* Spacing between sections */
-  }
-  
-  .content h2 {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	/* Soft shadow for depth */
+	margin-bottom: 20px;
+	/* Spacing between sections */
+}
+
+.content h2 {
 	color: #c9c9c9;
 	margin-bottom: 15px;
-  }
-  
-  .infoRow {
-	border: 1px solid #ddd; /* Subtle borders for each row */
+}
+
+.infoRow {
+	border: 1px solid #ddd;
+	/* Subtle borders for each row */
 	padding: 10px 15px;
 	border-radius: 5px;
-	margin-bottom: 10px; /* Spacing between rows */
+	margin-bottom: 10px;
+	/* Spacing between rows */
 	display: flex;
-	justify-content: space-between; /* Align content and value */
+	justify-content: space-between;
+	/* Align content and value */
 	align-items: center;
-  }
-  
-  .infoRow span {
+}
+
+.infoRow span {
 	font-weight: bold;
 	color: #555;
 	margin-right: 10px;
-  }
-  
-  .infoRow .value {
-	color: #1a73e8; /* Highlight values */
+}
+
+.infoRow .value {
+	color: #1a73e8;
+	/* Highlight values */
 	font-weight: bold;
-  }
-  
-  .infoRow.balanceRow {
-	margin-bottom: 30px; /* Increased bottom margin for Balance row */
-  }
+}
+
+.infoRow.balanceRow {
+	margin-bottom: 30px;
+	/* Increased bottom margin for Balance row */
+}
 
 .wrapperFooter {
 	display: flex;
@@ -211,55 +225,62 @@ span.button:hover {
 	0% {
 		background-position: 0% 50%;
 	}
+
 	100% {
 		background-position: 200% 50%;
 	}
 }
 
 .spacer {
-	height: 50px; /* Or whatever height you prefer for spacing */
-  }
-  
-  
-  .logoContainer {
+	height: 50px;
+	/* Or whatever height you prefer for spacing */
+}
+
+
+.logoContainer {
 	display: flex;
 	align-items: center;
 	/* Add any additional styling as needed */
-  }
-  
-  .logoTextContainer {
+}
+
+.logoTextContainer {
 	margin-left: 10px;
-  }
-  
-  .logoTitle {
-	font-size: 28px; /* Increased size for the main title */
-	color: #ffffff; /* Black color for the title */
+}
+
+.logoTitle {
+	font-size: 28px;
+	/* Increased size for the main title */
+	color: #ffffff;
+	/* Black color for the title */
 	margin: 0;
 	font-weight: bold;
-  }
-  
-  .logoSubtitle {
-	font-size: 18px; /* Larger size for the subtitle */
-	color: #ffffff; /* Black color for the subtitle */
-	margin: 0;
-	font-weight: bold; /* Making subtitle bold */
-  }
+}
 
-  .menuLink a {
+.logoSubtitle {
+	font-size: 18px;
+	/* Larger size for the subtitle */
+	color: #ffffff;
+	/* Black color for the subtitle */
+	margin: 0;
+	font-weight: bold;
+	/* Making subtitle bold */
+}
+
+.menuLink a {
 	color: white;
 	font-weight: bold;
-	background-color: var(--color-pepe); /* Green background */
+	background-color: var(--color-pepe);
+	/* Green background */
 	padding: 10px 15px;
 	border-radius: 8px;
 	text-decoration: none;
 	transition: background-color 0.3s ease;
 	margin-top: 10px;
 	margin: 10px;
-  
-  }
-  
-  .menuLink a:hover {
-	background-color: #3e8e41; /* Darker green on hover */
-  }
 
-  
+}
+
+.menuLink a:hover {
+	background-color: #3e8e41;
+	/* Darker green on hover */
+}

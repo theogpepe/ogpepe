@@ -43,38 +43,39 @@ const VideoGallery: React.FC = () => {
     };
 
     return (
-        <div className={styles.gallery}>
-            <div className={styles.description}>
-                <h1>Featured on:</h1>
-            </div>
-            <div className={styles.thumbnailGrid}>
-                {videos.map((video, index) => (
-                    <div key={index} className={styles.thumbnail} onClick={() => openModal(video.src)}>
-                        <img src={video.thumbnail} alt={video.title.join(' ')} />
-                        <p>
-                            {video.title.map((line, i) => (
-                                <span key={i}>
-                                    {line}
-                                    <br />
-                                </span>
-                            ))}
-                        </p>
-                    </div>
-                ))}
+        <div className={styles.description}>
+            <h1>Featured on:</h1>
+            <div className={styles.gallery}>
 
-            </div>
+                <div className={styles.thumbnailGrid}>
+                    {videos.map((video, index) => (
+                        <div key={index} className={styles.thumbnail} onClick={() => openModal(video.src)}>
+                            <img src={video.thumbnail} alt={video.title.join(' ')} />
+                            <p>
+                                {video.title.map((line, i) => (
+                                    <span key={i}>
+                                        {line}
+                                        <br />
+                                    </span>
+                                ))}
+                            </p>
+                        </div>
+                    ))}
 
-            {isOpen && currentVideo && (
-                <div className={styles.modalOverlay} onClick={closeModal}>
-                    <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-                        <video controls autoPlay>
-                            <source src={currentVideo} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        <button className={styles.closeBtn} onClick={closeModal}>Close</button>
-                    </div>
                 </div>
-            )}
+
+                {isOpen && currentVideo && (
+                    <div className={styles.modalOverlay} onClick={closeModal}>
+                        <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+                            <video controls autoPlay>
+                                <source src={currentVideo} type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                            <button className={styles.closeBtn} onClick={closeModal}>Close</button>
+                        </div>
+                    </div>
+                )}
+            </div>
         </div>
     );
 };

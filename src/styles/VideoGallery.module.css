@@ -1,5 +1,6 @@
 /* Container for the entire gallery */
 .gallery {
+    display: flex;
     padding: 20px;
     max-width: 1000px; /* Increased max width for a better layout */
     margin: 0 auto;
@@ -52,8 +53,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
@@ -70,12 +71,12 @@
 }
 
 .modalContent {
-    background: white;
-    padding: 20px;
+    background: #66974C;
+    padding: 10px;
     border-radius: 12px;
     position: relative;
-    max-width: 80%;
-    width: 600px;
+    max-width: 90%;
+    width: 800px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for the modal */
 }
 

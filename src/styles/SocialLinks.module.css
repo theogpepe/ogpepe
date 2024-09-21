@@ -2,21 +2,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Space between rows */
     padding: 20px; /* Add padding around the entire container */
 }
 
 .row {
     display: flex;
-    gap: 15px; /* Space between icons */
-    padding: 10px 0; /* Add padding above and below each row */
+    gap: 20px; /* Space between icons */
+    padding: 20px; /* Add padding above and below each row */
 }
 
 .logoImage {
-    border-radius: 50%; /* Optional: adds rounded corners to logos */
+    border-radius: 15%;
     padding: 4px; /* Add padding around each logo image */
-    background: linear-gradient(135deg, var(--color-pepe), var(--color-pepe-dark)); /* Gradient background */
-    border-radius: 6px;
+}
+
+.logoImage:hover {
+    background-color: rgba(0, 0, 0, 0.15); /* Black background with 60% opacity */
+
 }
 
 /* Optional: Responsive adjustments */
